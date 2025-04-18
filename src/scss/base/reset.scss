@@ -1,0 +1,65 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove link underlines */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Reset images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove border from buttons and inputs */
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Base styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: 'TT Firs Neue', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 0rem;
+  }
+  
+p {
+    margin-bottom: 0rem;
+}
+
+strong {
+    font-weight: bold;
+}
+  
