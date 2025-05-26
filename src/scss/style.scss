@@ -1,9 +1,15 @@
-// @use 'base/reset';
-// @use 'base/fonts';
-// @use 'base/mixin' as *;
+@use "base/reset";
+@use "base/fonts";
+@use "base/vars";
+@use "base/mixin" as *;
+@use "components/header";
 
-// .container{
-//     max-width: 1450px;
-//     width: 100%;
-//     margin: 0 auto;
-// }
+
+.header__container {
+    max-width: 1450px;
+    width: 100%;
+    margin: vars.$main-offset auto;
+    padding: 10px;
+}
+body {
+}

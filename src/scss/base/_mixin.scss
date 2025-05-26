@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+$sizes: (
+  "xs": 320px,
+  "sm": 576px,
+  "md": 768px,
+  "ml": 845px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+
+@mixin media($point) {
+  @if map.has-key($sizes, $point) {
+    @media (max-width: map.get($sizes, $point)) {
+      @content;
+    }
+  } @else {
+    @warn "⚠️ Брейкпоинт `#{$point}` не найден.";
+  }
+}
