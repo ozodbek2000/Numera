@@ -1,14 +1,60 @@
 .header {
 
+    padding: 20px 0px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__logo {
     }
 
     &__nav {
+        flex: 1 1 auto;
+        max-width: 630px;
 
         &_list {
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
+        &_item {
+        }
+
+        &_item.active {
+
+        }
+    }
+
+    &__lang {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        &_item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        &_item.active {
+            border: 1px solid var(--font-color);
+            border-radius: var(--radius);
+            padding: 10px 15px;
+        }
+    }
+
+    &__theme {
+        cursor: pointer;
+    }
+
+    &__contact {
+        padding: 20px;
+        color: var(--yellow);
+        border: 1px solid var(--yellow);
+        border-radius: var(--radius);
+        cursor: pointer;
     }
 }

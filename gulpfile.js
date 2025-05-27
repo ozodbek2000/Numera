@@ -66,18 +66,7 @@ function html() {
 }
 
 async function images() {
-    const imageminMozjpeg = (await import("imagemin-mozjpeg")).default;
-    const imageminOptipng = (await import("imagemin-optipng")).default;
-    const imageminSvgo = (await import("imagemin-svgo")).default;
-
     return src("src/img/**/*.{jpg,jpeg,png,svg,gif}")
-        .pipe(
-            imagemin([
-                imageminMozjpeg({ quality: 80 }),
-                imageminOptipng({ optimizationLevel: 5 }),
-                imageminSvgo(),
-            ])
-        )
         .pipe(dest("dist/img"))
         .pipe(browserSync.stream());
 }
@@ -103,7 +92,7 @@ function serve() {
     watch("src/js/**/*.js", scripts);
     watch("src/**/*.html", html);
     watch("src/fonts/**/*", fonts);
-    watch("src/img/**/*", series(images, convertWebp));
+    watch("src/img/**/*", series(images));
 }
 
-exports.default = series(clean, parallel(styles, scripts, html, fonts), serve);
+exports.default = series(clean, parallel(styles, scripts, html, fonts, images), serve);

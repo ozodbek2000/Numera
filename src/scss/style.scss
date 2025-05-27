@@ -1,15 +1,18 @@
 @use "base/reset";
 @use "base/fonts";
 @use "base/vars";
+@use "base/root";
 @use "base/mixin" as *;
 @use "components/header";
 
 
-.header__container {
+[class*="__container"]{
     max-width: 1450px;
-    width: 100%;
-    margin: vars.$main-offset auto;
-    padding: 10px;
+    margin: 0 auto;
+    padding: 0px 15px;
 }
 body {
+    background-color: var(--navy);
+    color: var(--font-color);
+    font-family: var(--bs-font-family);
 }

@@ -1,6 +1,6 @@
 :root {
 	// Семейство шрифта по умолчанию
-	--bs-font-family: "Inter", sans-serif;
+	--bs-font-family: Montserrat, Raleway;
 
 	// Размер шрифта по умолчанию
 	--bs-font-size: 16px;
@@ -12,9 +12,20 @@
 	--bs-line-height: 1;
 
 	// Цвет шрифта по умолчанию
-	--bs-font-color: #222;
+	--black: #000000;
+	--navy: #07202F;
+	--blue: #0072FF;
+	--lightblue: #3A97ED;
+	--yellow: #FFC357;
+	--bg-black: #040B0F;
+	--grey-70: rgba(255, 255, 255, 0.7);
+	--grey-60: rgba(255, 255, 255, 0.6);
+	--bg-white: #fff;
+	--font-color: #fff;
+	--radius: 15px;
+	
+
 	--bs-transition: 0.3s ease-in-out;
-	--bs-radius: 10px;
 	--primary-color: #131313;
 	--primary-hover-color: #2d2d2d;
 	--secondary-color: #ff4040;
