@@ -1,0 +1,117 @@
+.main {
+
+    background-color: var(--bg-black);
+    padding-bottom: 0px;
+
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__box {
+        position: relative;
+        flex: 0 1 69%;
+        background-color: var(--blue);
+        border-radius: var(--radius);
+        padding: 85px 50px 74px;
+
+        &_3d {
+            position: absolute;
+            bottom: -17%;
+            right: -9%;
+            width: 52%;
+        }
+    }
+
+    &__title {
+        max-width: 660px;
+    }
+
+    &__subtitle {
+        margin: 45px 0px 30px;
+        font-size: var(--subtitleSize);
+        line-height: var(--subtitle-line-height);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &_item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__contact {
+        padding: 20px;
+        border-radius: var(--radius);
+        border: 1px solid #fff;
+        display: inline-block;
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__img {
+        flex: 1 1 auto;
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    &__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media (max-width: 1080px) {
+        &__container {
+            flex-direction: column;
+            gap: 30px;
+            overflow: hidden;
+        }
+
+        &__box {
+            flex: 1 1 auto;
+            padding: 20px;
+    
+            > img {
+                position: absolute;
+                bottom: -5%;
+                right: -7%;
+                width: 32%;
+            }
+        }
+    
+        &__title {
+            max-width: 660px;
+        }
+    
+        &__subtitle {
+            margin: 20px 0px;
+            font-size: var(--mobileSubtitleSize);
+            line-height: var(--mobile-subtitle-line-height);
+        }
+    
+        &__list {
+    
+            &_item {
+            }
+        }
+    
+        &__contact {
+            padding: 17px 18px;
+            background-color: var(--yellow);
+            color: var(--navy);
+            border: none;
+            margin-top: 20px;
+        }
+    
+        &__img {
+            height: 250px;
+        }
+        &__img img {
+            height: 450px;
+        }
+    }
+}

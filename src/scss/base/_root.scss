@@ -1,6 +1,7 @@
 :root {
 	// Семейство шрифта по умолчанию
-	--bs-font-family: Montserrat, Raleway;
+	--montserrat: Montserrat, Raleway;
+	--raleway: Raleway;
 
 	// Размер шрифта по умолчанию
 	--bs-font-size: 16px;
@@ -10,6 +11,21 @@
 
 	// Базовая высота шрифта
 	--bs-line-height: 1;
+	--subtitle-line-height: 30px;
+	--mobile-subtitle-line-height: 20px;
+	--text-line-height: 30px;
+	--text-mobile-line-height: 20px;
+
+
+	// Размеры шрифтов
+	--title-size: 48px;
+	--mobileTitle-size: 24px;
+	--subtitleSize: 18px;
+	--mobileSubtitleSize: 14px;
+	--numeraSize: 14px;
+	--textSize: 18px;
+	--textMobileSize: 14px;
+
 
 	// Цвет шрифта по умолчанию
 	--black: #000000;
@@ -18,8 +34,8 @@
 	--lightblue: #3A97ED;
 	--yellow: #FFC357;
 	--bg-black: #040B0F;
-	--grey-70: rgba(255, 255, 255, 0.7);
-	--grey-60: rgba(255, 255, 255, 0.6);
+	--gray-70: rgba(255, 255, 255, 0.7);
+	--gray-60: rgba(255, 255, 255, 0.6);
 	--bg-white: #fff;
 	--font-color: #fff;
 	--radius: 15px;

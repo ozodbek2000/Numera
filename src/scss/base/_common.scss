@@ -1,1 +1,28 @@
 // Заголовки, общие БЄМ блоки и прочее...
+.title {
+    font-family: var(--raleway);
+    font-size: var(--title-size);
+    line-height: 1;
+    font-weight: 700;
+    @media (max-width:1080px) {
+        font-size: var(--mobileTitle-size);
+    }
+    span {
+        font-style: italic;
+        color: var(--yellow);
+        font-weight: 600;
+    }
+}
+.numera {
+    color: var(--yellow);
+    font-size: var(--numeraSize);
+}
+.text {
+    font-size: var(--textSize);
+    line-height: var(--text-line-height);
+    color: var(--gray-60);
+    @media (max-width: 1080px) {
+        font-size: var(--textMobileSize);
+        line-height: var(--text-mobile-line-height);
+    }
+}

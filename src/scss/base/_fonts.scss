@@ -124,3 +124,11 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/Raleway-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}

@@ -1,74 +1,87 @@
-/* Reset */
-*,
-*::before,
-*::after {
-    margin: 0;
+/*Обнуление*/
+* {
     padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-/* Remove list styles */
-ul,
-ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Remove link underlines */
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-/* Reset images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Remove border from buttons and inputs */
-button,
-input,
-textarea {
-    border: none;
+  }
+  
+  :focus, :active {
     outline: none;
-    font-family: inherit;
-}
-
-/* Base styles */
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #fff;
-    color: #222;
-    line-height: 1.5;
-    min-height: 100vh;
-    font-family: "TT Firs Neue", sans-serif;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: bold;
-    margin-bottom: 0rem;
-}
-
-p {
-    margin-bottom: 0rem;
-}
-
-strong {
-    font-weight: bold;
-}
-
-.header {
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
     display: block;
-}
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    transition: 0.3s ease all;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  a{
+    color: inherit;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  body{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    background-size: cover;
+  }
+  .wrapper{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }

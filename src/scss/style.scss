@@ -3,16 +3,21 @@
 @use "base/vars";
 @use "base/root";
 @use "base/mixin" as *;
+@use "base/common";
 @use "components/header";
+@use "components/main";
+@use "components/we";
 
-
-[class*="__container"]{
-    max-width: 1450px;
+[class*="__container"] {
+    max-width: vars.$max-width;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 0px vars.$main-offset;
 }
 body {
-    background-color: var(--navy);
+    background-color: var(--bg-black);
     color: var(--font-color);
-    font-family: var(--bs-font-family);
+    font-family: var(--montserrat);
+    @media (max-width: 1080px) {
+        background-color: var(--bg-black);
+    }    
 }

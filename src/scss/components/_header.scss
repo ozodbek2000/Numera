@@ -1,6 +1,6 @@
 .header {
-
     padding: 20px 0px;
+    background-color: var(--navy);
 
     &__container {
         display: flex;
@@ -25,7 +25,10 @@
         }
 
         &_item.active {
+        }
 
+        .header__arrow {
+            display: none;
         }
     }
 
@@ -51,10 +54,112 @@
     }
 
     &__contact {
-        padding: 20px;
-        color: var(--yellow);
-        border: 1px solid var(--yellow);
-        border-radius: var(--radius);
-        cursor: pointer;
+        display: none;
+    }
+
+    @media (max-width: 1080px) {
+
+        background-color: var(--bg-black);
+
+        &__container {
+        }
+
+        &__logo {
+            max-width: 120px;
+            svg {
+                width: 100%;
+            }
+        }
+
+        &__nav {
+
+            flex: inherit;
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: 999;
+            background-color: var(--navy);
+            transition: 0.3s ease all;
+
+            &_list {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 50px;
+                justify-content: space-between;
+                width: 232px;
+                height: 381px;
+                padding: 50px 0px;
+            }
+
+            &_item {
+            }
+
+            &_item.active {
+            }
+            
+            .header__arrow {
+                display: block;
+                position: fixed;
+                top: calc(50% - 50px);
+                left: 231px;
+                width: 30px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--navy);
+                border-radius: 0px 30px 30px 0px;
+                transition: 0.3s ease all;
+                svg {
+                    transform: rotate(0deg);
+                    transition: 0.3s ease all;
+                }
+            }
+
+        }
+        &__nav.active {
+            left: -232px;
+
+            .header__arrow {
+                left: 0;
+                svg {
+                    transform: rotate(180deg);
+                }
+                z-index: 1;
+            }
+        }
+
+        &__lang {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            &_item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+            }
+            &_item.active {
+                border: 1px solid var(--font-color);
+                border-radius: var(--radius);
+                padding: 10px 15px;
+            }
+        }
+
+        &__theme {
+            cursor: pointer;
+        }
+
+        &__contact {
+            padding: 20px;
+            color: var(--yellow);
+            border: 1px solid var(--yellow);
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
     }
 }

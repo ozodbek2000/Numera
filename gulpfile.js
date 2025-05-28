@@ -46,8 +46,7 @@ function fonts() {
 }
 
 function scripts() {
-    return src("src/js/index.js")
-        .pipe(webpack(require("./webpack.config.js")))
+    return src("src/js/**/*.js")
         .pipe(dest("dist/js"))
         .pipe(browserSync.stream());
 }
