@@ -3,6 +3,7 @@
     background-color: var(--bg-black);
     padding: 113px 0px 150px;
     overflow: hidden;
+    position: relative;
 
     &__container {
         display: flex;
@@ -56,9 +57,9 @@
     &__text {
     }
     @media (max-width: 1080px) {
-        margin: 80px 0px;
-        padding: 0px;
-        overflow: visible;
+        margin: 0px 0px;
+        padding: 80px 0px;
+        overflow: hidden;
 
         &__container {
             flex-direction: column-reverse;

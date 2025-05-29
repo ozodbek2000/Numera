@@ -1,7 +1,6 @@
 .main {
-
-    background-color: var(--bg-black);
-    padding-bottom: 0px;
+    background-color: var(--navy);
+    padding-bottom: 140px;
 
     &__container {
         display: flex;
@@ -65,6 +64,10 @@
         object-fit: cover;
     }
     @media (max-width: 1080px) {
+        
+        background-color: var(--bg-black);
+        padding-bottom: 0px;
+
         &__container {
             flex-direction: column;
             gap: 30px;

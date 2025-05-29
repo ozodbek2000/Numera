@@ -7,6 +7,8 @@
 @use "components/header";
 @use "components/main";
 @use "components/we";
+@use "components/source";
+@use "components/service";
 
 [class*="__container"] {
     max-width: vars.$max-width;
