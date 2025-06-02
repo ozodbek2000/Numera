@@ -22,6 +22,7 @@
 
 	// Размеры шрифтов
 	--title-size: 48px;
+	--card-subtitle: 32px;
 	--mobileTitle-size: 24px;
 	--subtitleSize: 18px;
 	--mobileSubtitleSize: 14px;
@@ -30,6 +31,9 @@
 	--textMobileSize: 14px;
 	--cardTitleSize: 28px;
 	--cardTitleMobileSize: 24px;
+	--textMedSize: 16px;
+	--textMedMobileSize: 14px;
+	--cardNumSize: 36px;
 
 
 	// Цвет шрифта по умолчанию
@@ -38,6 +42,7 @@
 	--blue: #0072FF;
 	--lightblue: #3A97ED;
 	--yellow: #FFC357;
+	--bright-yellow: #FFB927;
 	--bg-black: #040B0F;
 	--gray-70: rgba(255, 255, 255, 0.7);
 	--gray-60: rgba(255, 255, 255, 0.6);
@@ -46,7 +51,7 @@
 	--radius: 15px;
 	
 
-	--bs-transition: 0.3s ease-in-out;
+	--transition: 0.3s ease all;
 	--primary-color: #131313;
 	--primary-hover-color: #2d2d2d;
 	--secondary-color: #ff4040;

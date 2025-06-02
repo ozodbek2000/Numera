@@ -2,8 +2,8 @@
     <div class="service__container">
       <div class="service__top">
         <div class="service__top_content">
-          <div class="service__top_tag tag">#Numera</div>
-          <div class="service__top_title title">На связилюбым удобным способом</div>
+          <div class="service__top_numera numera">#Numera</div>
+          <div class="service__top_title title">На связи<br>любым удобным способом</div>
           <div class="service__top_text text">Взаимодействие с нашей командой организовано по принципу “одного окна” — вам не нужно обращаться к разным специалистам или повторно объяснять свою задачу. С вами работает персональный ассистент, который координирует весь процесс, контролирует сроки и отвечает на любые вопросы. Вы можете связаться с ним любым удобным способом: по телефону, через мессенджеры или по электронной почте — как вам удобно.</div>
         </div>
         <div class="service__top_grid">
@@ -31,12 +31,31 @@
       </div>
       <div class="service__bottom">
         <div class="service__bottom_content">
-          <div class="service__bottom_tag tag">#Numera</div>
+          <div class="service__bottom_numera numera">#Numera</div>
           <div class="service__bottom_title title">Подберите услуги для вашего бизнеса</div>
           <div class="service__bottom_text text">"Мы работаем, чтобы приносить реальную пользу компаниям любого масштаба и профиля. Опираясь на опыт и профессионализм, мы помогаем находить лучшие решения. Давайте вместе определим, что будет наиболее эффективным именно для вас."</div>
         </div>
         <div class="service__bottom_inputs">
+          @@include('../components/dropdown.html', {
+            "label": "Интересующая услуга:",
+            "service": "Выберите услугу",
+            "items": "<li class='dropdown__item'>SMM</li><li class='dropdown__item'>SEO</li><li class='dropdown__item'>Контекстная реклама</li>"
+          })
           
+          
+          @@include('../components/dropdown.html', {
+            "label": "Размер компании:",
+            "service": "Количество сотрудников",
+            "items": "<li class='dropdown__item'>1-10</li><li class='dropdown__item'>11-50</li><li class='dropdown__item'>51 и больше</li>"
+          })
+          
+          @@include('../components/dropdown.html', {
+            "label": "Ваша должность:",
+            "service": "Выберите должность",
+            "items": "<li class='dropdown__item'>Маркетолог</li><li class='dropdown__item'>Предприниматель</li><li class='dropdown__item'>Менеджер проекта</li>"
+          })
+                 
+            <a href="##" class="service__bottom_button button">Посмотреть услугу</a>
         </div>
       </div>
     </div>

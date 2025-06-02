@@ -4,7 +4,7 @@
     font-size: var(--title-size);
     line-height: 1;
     font-weight: 700;
-    @media (max-width:1080px) {
+    @media (max-width: 1080px) {
         font-size: var(--mobileTitle-size);
     }
     span {
@@ -55,4 +55,11 @@
     @media (max-width: 1080px) {
         font-size: var(--cardTitleMobileSize);
     }
+}
+.button {
+    border-radius: var(--radius);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--blue);
+    text-align: center;
 }

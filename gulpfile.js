@@ -14,18 +14,6 @@ const rename = require("gulp-rename");
 const del = require("del");
 const fileInclude = require("gulp-file-include");
 
-let imageminMozjpeg, imageminOptipng, imageminSvgo;
-(async () => {
-    imageminMozjpeg = await import("imagemin-mozjpeg").then((m) => m.default);
-    imageminOptipng = await import("imagemin-optipng").then((m) => m.default);
-    imageminSvgo = await import("imagemin-svgo").then((m) => m.default);
-})();
-
-let imageminWebp;
-(async () => {
-    imageminWebp = await import("imagemin-webp").then((m) => m.default);
-})();
-
 function clean() {
     return del(["dist/**", "!dist/img/**", "!dist/img"]);
 }
@@ -47,16 +35,18 @@ function fonts() {
 
 function scripts() {
     return src("src/js/**/*.js")
+        .pipe(webpack(require("./webpack.config.js")))
         .pipe(dest("dist/js"))
         .pipe(browserSync.stream());
 }
+
+exports.scripts = scripts;
 
 function html() {
     return src("src/html/**/*.html")
         .pipe(
             fileInclude({
-                prefix: "<!--= ",
-                suffix: " -->",
+                prefix: "@@",
                 basepath: "@file", // важно!
             })
         )
@@ -88,10 +78,13 @@ function serve() {
     });
 
     watch("src/scss/**/*.scss", styles);
-    watch("src/js/**/*.js", scripts);
     watch("src/**/*.html", html);
     watch("src/fonts/**/*", fonts);
     watch("src/img/**/*", series(images));
 }
 
-exports.default = series(clean, parallel(styles, scripts, html, fonts, images), serve);
+exports.default = series(
+    clean,
+    parallel(styles, scripts, html, fonts, images),
+    serve
+);

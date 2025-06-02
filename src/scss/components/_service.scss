@@ -1,59 +1,196 @@
 .service {
 
+    margin: 130px 0px;
+
     &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 130px;
     }
 
     &__top {
 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
         &_content {
         }
 
-        &_tag {
+        &_numera {
         }
 
         &_title {
+            margin: 20px 0px 30px 0px;
         }
 
         &_text {
+            font-size: var(--textMedSize);
         }
 
         &_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
         &_grid-item {
+            padding: 20px 20px 30px 20px;
+            border: 1px solid var(--yellow);
+            border-radius: var(--radius);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         &_grid-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
 
         &_grid-num {
+            font-size: var(--cardNumSize);
+            color: var(--yellow);
+            opacity: 0.3;
+            font-weight: 600;
         }
 
         &_grid-name {
+            font-size: var(--mobileTitle-size);
+            color: var(--yellow);
+            font-weight: 600;
+            margin-top: auto;
         }
     }
 
     &__bottom {
+        display: flex;
+        gap: 60px;
 
         &_content {
+            flex: 0 1 45%;
         }
 
-        &_tag {
+        &_numera {
         }
 
         &_title {
+            margin: 20px 0px 30px;
         }
 
         &_text {
+            font-size: var(--textMedSize);
         }
 
         &_inputs {
+            flex: 0 1 55%;
+            padding: 30px;
+            background-color: var(--navy);
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
     }
-}
-.tag {
-}
-.title {
-}
-.text {
+    @media (max-width: 1080px) {
+        margin: 0px 0px 80px 0px;
+
+        &__container {
+            gap: 80px;
+        }
+
+        &__top {
+
+            grid-template-columns: repeat(1, 1fr);
+            gap: 60px;
+
+            &_content {
+                text-align: center;
+            }
+
+            &_numera {
+            }
+
+            &_title {
+                margin: 25px 0px;
+            }
+
+            &_text {
+                font-size: var(--textMedMobileSize);
+            }
+
+            &_grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            &_grid-item {
+                padding: 20px 20px 20px 10px;
+                height: 160px;
+            }
+
+            &_grid-icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                max-width: 30px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            &_grid-num {
+                font-size: var(--cardNumSize);
+                color: var(--yellow);
+                opacity: 0.3;
+                font-weight: 600;
+            }
+
+            &_grid-name {
+                font-size: var(--textMedSize);
+                color: var(--yellow);
+                font-weight: 600;
+                margin-top: inherit;
+            }
+        }
+
+        &__bottom {
+            flex-direction: column;
+            gap: 70px;
+
+            &_content {
+                flex: inherit;
+                text-align: center;
+            }
+
+            &_numera {
+            }
+
+            &_title {
+                margin: 20px 0px 30px;
+            }
+
+            &_text {
+                font-size: var(--textMedSize);
+                line-height: var(--card-title-line-height);
+            }
+
+            &_inputs {
+                flex: 0 1 55%;
+                padding: 50px 30px 30px 30px;
+                background-color: var(--navy);
+                border-radius: var(--radius);
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            &_button {
+                margin-top: -10px;
+            }
+        }
+    }
 }

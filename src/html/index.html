@@ -1,27 +1,27 @@
 <!-- src/html/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Numera</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  
-  <!--= include('../components/header.html') -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Numera</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        @@include('../components/header.html')
 
-  <main class="wrapper">
-    <!--= include('../components/main.html') -->
-    <!--= include('../components/we.html') -->
-    <!--= include('../components/source.html') -->
-    <!--= include('../components/service.html') -->
-    
-  </main>
+        <main class="wrapper">
+            @@include('../components/main.html')
+            @@include('../components/we.html')
+            @@include('../components/source.html')
+            @@include('../components/service.html')
+            @@include('../components/cta.html')
+            @@include('../components/calc.html')
+        </main>
 
-  <!--= include('../components/footer.html') -->
+        @@include('../components/footer.html')
 
-  <script src="../js/jquery-3.4.1.slim.min.js"></script>
-  <script src="../js/index.js"></script>
-</body>
+        <!-- <script src="../js/components/dropdown.js"></script> -->
+        <script src="../js/index.js"></script>
+    </body>
 </html>

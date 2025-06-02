@@ -1,0 +1,114 @@
+.dropdown {
+    position: relative;
+    color: var(--navy);
+    &_list {
+        background-color: #fff;
+        border-radius: var(--radius);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: var(--transition);
+        height: 0;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 2;
+    }
+    &_list.active {
+        visibility: visible;
+        opacity: 1;
+        height: inherit;
+    }
+
+    &__input {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        pointer-events: none;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        overflow: hidden;
+        user-select: none;
+
+        gap: 10px;
+
+        border-radius: var(--radius);
+        padding: 20px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    &__title:hover {
+        background-color: #e0e0e0;
+    }
+
+    &__item {
+        padding: 10px 20px;     
+        cursor: pointer;
+    }
+    &__item:hover {
+        background-color: #e0e0e0;
+    }
+    @media (max-width: 1080px) {
+        &_list {
+        }
+        &_list.active {
+        }
+
+        &__input {
+        }
+
+        &__label {
+            top: -30px;
+            left: 0px;
+            pointer-events: inherit;
+            color: var(--gray-70);
+            font-size: var(--textMobileSize);
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            overflow: hidden;
+            user-select: none;
+
+            gap: 10px;
+
+            border-radius: var(--radius);
+            padding: 20px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        &__title:hover {
+            background-color: #e0e0e0;
+        }
+
+        &__item {
+            padding: 10px 20px;     
+            cursor: pointer;
+        }
+        &__item:hover {
+            background-color: #e0e0e0;
+        }
+
+    }
+}

@@ -9,6 +9,11 @@
 @use "components/we";
 @use "components/source";
 @use "components/service";
+@use "components/dropdown";
+@use "components/dropdown-simple";
+@use "components/cta";
+@use "components/calc";
+
 
 [class*="__container"] {
     max-width: vars.$max-width;
