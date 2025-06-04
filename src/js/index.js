@@ -7,6 +7,17 @@ $(document).ready(function () {
     $(".header__arrow").click(function (event) {
         $(".header__nav").toggleClass("active");
     });
+    $(".calc__content_months > span").click(function (event) {
+        $(".calc__content_months > span").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".calc__tarifs > .calc__tarifs_item").click(function (event) {
+        $(".calc__tarifs > .calc__tarifs_item").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".faq-item").click(function (event) {
+        $(this).toggleClass("active");
+    });
     dropdown();
     dropdownSimple();
     if ($(window).width() < 1080) {

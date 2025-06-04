@@ -18,7 +18,6 @@ const dropdownSimple = () => {
             $(".dropdown-simple_list").removeClass("active");
         }
     });
-    console.log('shit')
 };
 
 export { dropdownSimple };

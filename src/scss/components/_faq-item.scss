@@ -1,0 +1,35 @@
+.faq-item {
+    border-bottom: 1px solid var(--yellow);
+    user-select: none;
+
+    .question {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px 0px;
+        cursor: pointer;
+    }    
+
+    .answer {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: 0.3s ease-in-out all;
+        line-height: var(--text-mobile-line-height);
+        padding: 0;
+    }
+
+    &.active .answer {
+        position: relative;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+        max-height: 300px;
+        padding-bottom: 20px;
+
+    }
+
+}

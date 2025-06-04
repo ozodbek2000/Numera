@@ -1,0 +1,44 @@
+.map {
+    background-image: url(../img/png/map-dark.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 640px;
+
+    &__container {
+        max-width: 765px !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        color: var(--yellow);
+    }
+
+    &__text {
+        color: var(--bg-white);
+    }
+    @media (max-width: 1080px) {
+        background-size: cover;
+        &__container {
+            max-width: 765px !important;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__title {
+            color: var(--yellow);
+        }
+
+        &__text {
+            color: var(--bg-white);
+        }
+    }
+}

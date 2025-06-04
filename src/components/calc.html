@@ -3,7 +3,7 @@
         <div class="calc__numera numera">#Numera</div>
         <div class="calc__title title">Рассчитайте стоимость бухгалтерского обслуживания</div>
         <div class="calc__tarifs">
-            <div class="calc__tarifs_item">Полное обслуживание</div>
+            <div class="calc__tarifs_item active">Полное обслуживание</div>
             <div class="calc__tarifs_item">Частичное обслуживание</div>
             <div class="calc__tarifs_item calc__tarifs_about">Подробнее о тарифах</div>
         </div>
@@ -14,14 +14,95 @@
                         <label for="#">Форма собственности</label>
                         @@include('../components/dropdown-simple.html')
                     </div>
-                    <!-- <div class="calc__inputs_box-input">
+                    <div class="calc__inputs_box-input">
                         <label for="#">Организационная форма</label>
                         @@include('../components/dropdown-simple.html')
-                    </div> -->
+                    </div>
+                </div>
+                <div class="calc__inputs_form">
+                    <label for="#">Форма собственности</label>
+                    @@include('../components/dropdown-simple.html')
+                </div>
+                <div class="calc__inputs_box calc__inputs_box--2">
+                    <div class="calc__inputs_box-item">
+                        <label for="##">
+                            <span>Кол-во сотрудников*</span>
+                            <p>Включая работающих по ГПД и генерального директора</p>
+                        </label>
+                        <div class="calc__inputs_production">
+                            <input type="number" value="0">
+                            <label for="##">Производство</label>
+                        </div>
+                    </div>
+                    <div class="calc__inputs_box-item">
+                        <label for="##">
+                            <span>Оборот в месяц</span>
+                            <p>Примерный или прогнозируемый</p>
+                        </label>
+                        <div class="calc__inputs_production">
+                            <input type="number" value="0">
+                            <label for="##">UZS</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc__inputs_clear">
+                    <a href="##">
+                        <img src="../img/svg/clear.svg" alt="#">
+                        <span>Очистить все поля</span>
+                    </a>
+                    <a href="##">
+                        <img src="../img/svg/copy.svg" alt="#">
+                        <span>Копировать данные</span>
+                    </a>
+                </div>
+                <div class="calc__inputs_text text">Нажимая кнопку «Оплатить сейчас», я подтверждаю, что все введённые мной данные соответствуют действительности и будут использоваться для расчета стоимости обслуживания. Я ознакомлен(-а) с тем, что сумма абонентской платы может быть пересмотрена только при изменении предоставленных данных и подлежит пересчету в индивидуальном порядке.</div>
+                <div class="calc__inputs_textarea">
+                    <label for="##">
+                        <span>Не уверены в тарифе? </span>
+                        <p>Получите профессиональную консультацию</p>
+                    </label>
+                    <textarea name="#" id="#" placeholder="Расскажите, чем можем помочь?"></textarea>
+                    <div class="calc__inputs_textarea-send">
+                        <img src="../img/svg/send.svg" alt="#">
+                    </div>
                 </div>
             </div>
             <div class="calc__content">
-
+                <div class="calc__content_months">
+                    <span class="active">3 мес</span>
+                    <span>6 мес</span>
+                    <span>9 мес</span>
+                    <span>год</span>
+                </div>
+                <div class="calc__content_box">
+                    <div class="calc__content_content">
+                        <div class="calc__content_content-title">Полное<br>обслуживание</div>
+                        <div class="calc__content_content-subtitle">Бухгалтерский, налоговый и кадровый учёт с расчётом зарплаты</div>
+                        <div></div>
+                        <div class="calc__content_content-price">
+                            <span>1 799 999 сум</span>
+                            <p>в месяц при оплате</p>
+                            <div>5 000 000 сум за три месяца</div>
+                        </div>
+                    </div>
+                    <div class="calc__content_inputs">
+                        <input type="text" placeholder="Имя">
+                        <div class="calc__content_inputs-box">
+                            <input type="email" placeholder="Email">
+                            <input type="tel" placeholder="+998" value="+998">
+                        </div>
+                        <label> 
+                            <input type="checkbox"> 
+                            Соглашаюсь на автопродление текущего тарифа
+                        </label>
+                        <div class="calc__content_buttons">
+                            <a class="calc__content_pay" href="##">Оплатить сейчас</a>
+                            <a class="calc__content_cons button" href="##" class="button">Нужна консультация</a>
+                        </div>
+                        <div class="calc__content_info">Нажимая на кнопку «Нужна консультация», «Оплатить сейчас», я даю Согласие на обработку и Согласие на распространение персональных данных.</div>
+                        <div class="calc__content_info">Нажимая на кнопку «Оплатить сейчас», я принимаю Публичную оферту о заключении абонентского договора об оказании услуг бухгалтерского сопровождения полностью и без оговорок.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
