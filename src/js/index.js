@@ -26,6 +26,20 @@ $(document).ready(function () {
             spaceBetween: 10,
         });
     }
+
+    if ($(window).width() < 1080) {
+        new Swiper(".story__swiper", {
+            spaceBetween: 10,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                }
+            }
+        });
+    }
 });
 
 console.log("Gulp Webpack сборка работает!");

@@ -1,0 +1,81 @@
+.story {
+    padding-top: 60px;
+    position: relative;
+    margin-bottom: 130px;
+
+    &__container {
+    }
+
+    &__numera {
+    }
+
+    &__title {
+        margin: 20px 0px 60px 0px;
+    }
+
+    &__swiper {
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    &__slide {
+
+        &_content {
+            border-radius: 0 var(--radius) var(--radius) var(--radius);
+            border: 1px solid var(--yellow);
+            padding: 20px 20px 30px;
+            margin-top: 10px;
+        }
+
+        &_name {
+            font-weight: 600;
+            font-size: var(--card-subtitle);
+        }
+
+        &_position {
+            color: var(--yellow);
+            margin: 20px 0px;
+        }
+
+        &_text {
+            font-size: var(--textMedMobileSize);
+            line-height: var(--min-title-mobile-line-height);
+            color: var(--gray-70);
+        }
+    }
+
+    &__slide {
+
+        &_img {
+            border-radius: 15px 15px 15px 0px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__tag {
+    }
+
+    @media (max-width: 1080px) {
+        padding-top: 0px;
+        position: relative;
+        margin-bottom: 80px;
+
+        &__title {
+            margin: 10px 0px 30px 0px;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0px;
+        }
+
+    }
+}
