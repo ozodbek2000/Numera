@@ -4,6 +4,15 @@ import { dropdown } from "./components/dropdown";
 import { dropdownSimple } from "./components/dropdown-simple";
 
 $(document).ready(function () {
+    $(".header__theme").click(function (event) {
+        $("body").toggleClass("light");
+    });
+    $(document).on("keydown", function(event) {
+        if (event.key === "t" || event.key === "T") {
+            $("body").toggleClass("light");
+        }
+    });
+    
     $(".header__arrow").click(function (event) {
         $(".header__nav").toggleClass("active");
     });

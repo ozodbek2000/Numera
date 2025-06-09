@@ -50,6 +50,21 @@
 	--bg-white: #fff;
 	--font-color: #fff;
 	--radius: 15px;
+
+	//ROOT COLORS
+	--white-navy: #fff;
+	--white-blue: #fff;
+	--white-gray: #AAACAA;
+	--white-grayish: #fff;
+	--yellow-blue: #FFC357;
+	--yellow-03-navy: #4F4225;
+	--navy-white: #07202F;
+	--navy-blue-05: #07202F;
+	--black-white: #040B0F;
+	--gray-70-navy: rgba(255, 255, 255, 0.7);
+	--gray-70-blue-50: rgba(255, 255, 255, 0.7);
+	--transparent-blue-05: transparent;
+	--transparent-blue: transparent;
 	
 
 	--transition: 0.3s ease all;
@@ -60,4 +75,20 @@
 	--black-color: #131313;
 	--bs-shadow: 0px 2px 3px #{rgba(#000, 10%)}, 0px 8px 3px #{rgba(#000, 10%)};
 	--hover-shadow: 0 0 5px 0 #{rgba(#000, 10%)}, 0 0 10px 0 #{rgba(#000, 10%)}, 0 0 15px 0 #{rgba(#000, 10%)};
+}
+:root body.light{
+	--white-navy: #07202F;
+	--white-blue: #0072FF;
+	--white-gray: #AAAAAA;
+	--white-grayish: #555;
+	--yellow-blue: #0072FF;
+	--yellow-03-navy: #07202F;
+	--navy-white: #fff;
+	--navy-blue-05: #F2F8FF;
+	--black-white: #fff;
+	--gray-70-navy: #07202F;
+	--gray-70-blue-50: rgba(0, 114, 255, 0.5);
+	--transparent-blue-05: #F2F8FF;
+	--transparent-blue: #0072FF;
+
 }

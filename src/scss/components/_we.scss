@@ -1,6 +1,7 @@
 .we {
     margin: 130px 0px;
-    background-color: var(--bg-black);
+    background-color: var(--black-white);
+    transition: 0.3s ease all;
     padding: 113px 0px 150px;
     overflow: hidden;
     position: relative;
@@ -112,4 +113,8 @@
 
         }
     }
+}
+body.light .we__img_uzb ellipse[fill="#F2F1EC"] {
+    fill: #0072FF;
+    opacity: 0.6;
 }

@@ -21,11 +21,14 @@
         &_item {
             padding: 20px 30px;
             cursor: pointer;
+            color: var(--white-navy);
+            border-bottom: 3px solid transparent;
             &.active {
                 border-bottom: 3px solid var(--blue);
+                color: var(--white-blue);
             }
             &:nth-child(3) {
-                color: var(--yellow);
+                color: var(--yellow-blue);
                 margin-left: auto;
             }
         }
@@ -58,6 +61,7 @@
             gap: 15px;
             & label {
                 margin-left: 20px;
+                color: var(--white-gray);
             }
         }
 
@@ -68,6 +72,7 @@
             margin-top: 32px;
             & label {
                 margin-left: 20px;
+                color: var(--white-gray);
             }
         }
 
@@ -86,10 +91,10 @@
                     margin-bottom: 15px;
                     
                     span {
-
+                        color: var(--white-blue);
                     }
                     p {
-                        color: #F2F1EC;
+                        color: var(--white-gray);
                         opacity: 0.7;
                     }
                     
@@ -137,6 +142,13 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                color: var(--white-navy);
+                span {
+                    color: var(--white-navy);
+                }
+                svg path[stroke="white"] {
+                    stroke: var(--white-navy);
+                }
             }
         }
 
@@ -156,11 +168,12 @@
                 span {
                     font-weight: 700;
                     font-size: var(--mobileTitle-size);
+                    color: var(--white-blue);
                 }
                 p {
                     font-size: var(--numeraSize);
                     margin-bottom: 20px;
-                    color: var(--yellow);
+                    color: var(--yellow-blue);
                 }
             }
             
@@ -170,6 +183,7 @@
                 width: 100%;
                 padding: 20px;
                 resize: none;
+                border: 1px solid var(--transparent-blue);
                 &::placeholder {
                     color: #555;
                     opacity: 0.5;
@@ -203,7 +217,8 @@
                 height: 58px;
                 display: flex;
                 align-items: center;
-                border: 1px solid #fff;
+                border: 1px solid var(--white-blue);
+                color: var(--white-blue);
                 flex: 1 1 auto;
                 justify-content: center;
                 font-weight: 600;
@@ -213,6 +228,7 @@
                 &.active {
                     background-color: var(--blue);
                     border-color: var(--blue);
+                    color: #fff;
                 }
             }
         }
@@ -376,7 +392,7 @@
 
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #023F87;
+        border-bottom: 1px solid #0072FF;
         margin-bottom: 40px;
         overflow-y: auto;
         
@@ -427,6 +443,7 @@
             gap: 15px;
             & label {
                 margin-left: 20px;
+                color: var(--white-gray);
             }
         }
 
@@ -437,6 +454,7 @@
             margin-top: 32px;
             & label {
                 margin-left: 20px;
+                color: var(--white-gray);
             }
         }
 
@@ -459,7 +477,7 @@
 
                     }
                     p {
-                        color: #F2F1EC;
+                        color: var(--white-gray);
                         opacity: 0.7;
                     }
                     
@@ -575,7 +593,7 @@
                 height: 58px;
                 display: flex;
                 align-items: center;
-                border: 1px solid #fff;
+                border: 1px solid var(--white-blue);
                 flex: 1 1 auto;
                 justify-content: center;
                 font-weight: 600;

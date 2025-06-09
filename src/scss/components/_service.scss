@@ -36,12 +36,13 @@
 
         &_grid-item {
             padding: 20px 20px 30px 20px;
-            border: 1px solid var(--yellow);
+            border: 1px solid var(--yellow-blue);
             border-radius: var(--radius);
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background-color: var(--transparent-blue-05);
         }
 
         &_grid-icon {
@@ -52,14 +53,13 @@
 
         &_grid-num {
             font-size: var(--cardNumSize);
-            color: var(--yellow);
-            opacity: 0.3;
+            color: var(--yellow-03-navy);
             font-weight: 600;
         }
 
         &_grid-name {
             font-size: var(--mobileTitle-size);
-            color: var(--yellow);
+            color: var(--yellow-blue);
             font-weight: 600;
             margin-top: auto;
         }
@@ -87,7 +87,7 @@
         &_inputs {
             flex: 0 1 55%;
             padding: 30px;
-            background-color: var(--navy);
+            background-color: var(--navy-blue-05);
             border-radius: var(--radius);
             display: flex;
             flex-direction: column;
@@ -181,7 +181,6 @@
             &_inputs {
                 flex: 0 1 55%;
                 padding: 50px 30px 30px 30px;
-                background-color: var(--navy);
                 border-radius: var(--radius);
                 display: flex;
                 flex-direction: column;

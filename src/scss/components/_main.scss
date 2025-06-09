@@ -1,6 +1,7 @@
 .main {
-    background-color: var(--navy);
+    background-color: var(--navy-white);
     padding-bottom: 140px;
+    transition: 0.3s ease all;
 
     &__container {
         display: flex;
@@ -24,6 +25,7 @@
 
     &__title {
         max-width: 660px;
+        color: #fff;
     }
 
     &__subtitle {
@@ -65,7 +67,7 @@
     }
     @media (max-width: 1080px) {
         
-        background-color: var(--bg-black);
+        background-color: var(--black-white);
         padding-bottom: 0px;
 
         &__container {

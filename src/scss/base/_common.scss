@@ -4,6 +4,7 @@
     font-size: var(--title-size);
     line-height: 1;
     font-weight: 700;
+    color: var(--white-blue);
     @media (max-width: 1080px) {
         font-size: var(--mobileTitle-size);
     }
@@ -20,7 +21,7 @@
 .text {
     font-size: var(--textSize);
     line-height: var(--text-line-height);
-    color: var(--gray-60);
+    color: var(--gray-70-navy);
     @media (max-width: 1080px) {
         font-size: var(--textMobileSize);
         line-height: var(--text-mobile-line-height);
@@ -29,16 +30,16 @@
 .min-text {
     font-size: var(--numeraSize);
     line-height: var(--min-title-line-height);
-    color: var(--gray-70);
+    color: var(--gray-70-blue-50);
     @media (max-width: 1080px) {
         line-height: var(--min-title-mobile-line-height);
     }
 }
 .tag {
-    color: var(--navy);
+    color: var(--navy-white);
     writing-mode: vertical-rl; /* или vertical-lr */
     padding: 10px 8px;
-    background-color: var(--yellow);
+    background-color: var(--yellow-blue);
     border-radius: 0px 10px 10px 0px;
     position: absolute;
     right: 0px;
@@ -62,4 +63,18 @@
     padding-bottom: 20px;
     background-color: var(--blue);
     text-align: center;
+}
+.mobile-only {
+    display: none;
+}
+.desktop-only {
+
+}
+@media (max-width: 1080px) {
+    .mobile-only {
+        display: inherit;
+    }
+    .desktop-only {
+        display: none;
+    }
 }

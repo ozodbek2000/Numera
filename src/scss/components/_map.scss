@@ -17,11 +17,11 @@
     }
 
     &__title {
-        color: var(--yellow);
+        color: var(--yellow-blue);
     }
 
     &__text {
-        color: var(--bg-white);
+        color: var(--white-grayish);
     }
     @media (max-width: 1080px) {
         background-size: cover;
@@ -41,4 +41,7 @@
             color: var(--bg-white);
         }
     }
+}
+body.light .map {
+    background-image: url(../img/png/map-light.png);
 }

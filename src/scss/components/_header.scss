@@ -1,6 +1,7 @@
 .header {
     padding: 20px 0px;
-    background-color: var(--navy);
+    background-color: var(--navy-white);
+    transition: 0.3s ease all;
 
     &__container {
         display: flex;
@@ -22,6 +23,10 @@
         }
 
         &_item {
+            a {
+                color: var(--white-navy);
+                transition: 0.3s ease all;
+            }
         }
 
         &_item.active {
@@ -40,10 +45,12 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            color: var(--white-navy);
+            transition: 0.3s ease all;
             cursor: pointer;
         }
         &_item.active {
-            border: 1px solid var(--font-color);
+            border: 1px solid var(--white-blue);
             border-radius: var(--radius);
             padding: 10px 15px;
         }
@@ -51,15 +58,24 @@
 
     &__theme {
         cursor: pointer;
+        user-select: none;
     }
 
     &__contact {
-        display: none;
+        color: var(--yellow-blue);
+        border-radius: var(--radius);
+        border: 1px solid var(--yellow-blue);
+        height: 61px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+        transition: 0.3s ease all;
     }
 
     @media (max-width: 1080px) {
 
-        background-color: var(--bg-black);
+        background-color: var(--black-white);
 
         &__container {
         }
@@ -144,7 +160,6 @@
                 cursor: pointer;
             }
             &_item.active {
-                border: 1px solid var(--font-color);
                 border-radius: var(--radius);
                 padding: 10px 15px;
             }
@@ -160,6 +175,7 @@
             border: 1px solid var(--yellow);
             border-radius: var(--radius);
             cursor: pointer;
+            display: none;
         }
     }
 }

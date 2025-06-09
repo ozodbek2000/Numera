@@ -66,6 +66,7 @@
 
         &_slide:first-child {
             grid-column: span 2;
+            border: 1px solid var(--transparent-blue);
         }
         &_slide:first-child {
             .cta__top_slide-title {
@@ -87,6 +88,7 @@
                 margin-left: auto;
             }
             .cta__top_slide-title {
+                color: #fff;
             }
             .cta__top_slide-icon {
                 bottom: inherit;
@@ -133,12 +135,21 @@
         }
         &_slide:first-child {
             background-color: var(--navy);
+            & .text {
+                color: #F2F1EC;
+            }
         }
         &_slide:nth-child(2) {
             background-color: rgba(0, 114, 255, 0.5);
+            & .text {
+                color: #fff;
+            }
         }
         &_slide:nth-child(3) {
             background-color: var(--bright-yellow);
+            & .text {
+                color: var(--white-navy);
+            }
         }
 
         &_slide-title {
@@ -282,7 +293,7 @@
             }
 
             &_slide {
-                height: 290px;
+                height: 200px;
                 padding: 30px;
                 border-radius: var(--radius);
                 display: flex;

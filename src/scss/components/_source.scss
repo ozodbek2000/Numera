@@ -1,7 +1,7 @@
 .source {
     
     padding: 54px 0px;
-    background-color: var(--navy);
+    background-color: var(--navy-white);
     position: relative;
 
     &__container {
@@ -24,8 +24,9 @@
 
         &_item {
             border-radius: 20px;
-            border: 1px solid #F2F1EC;
+            border: 1px solid var(--white-blue);
             padding: 20px 20px 30px 20px;
+            color: var(--white-blue);
         }
 
         &_item-icon {
@@ -41,7 +42,7 @@
 
     @media (max-width: 1080px) {
         padding: 80px 0px;
-        background-color: transparent;
+        background-color: var(--navy-white);
 
         &__container {
         }
@@ -63,7 +64,7 @@
 
             &_item {
                 border-radius: 20px;
-                border: 1px solid #F2F1EC;
+                border: 1px solid var(--white-blue);
                 padding: 20px 20px 30px 20px;
             }
 
