@@ -1,6 +1,6 @@
 .support {
     margin-bottom: 130px;
-    background-color: var(--navy);
+    background-color: var(--navy-transparent);
     padding: 60px 0px 85px 0px;
     position: relative;
 
@@ -85,6 +85,7 @@
         align-items: center;
         gap: 20px;
         font-weight: 300;
+        color: var(--white-blue);
 
         &_img {
             height: 40px;
@@ -94,6 +95,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: var(--transparent-blue);
+
+            
+
+            .support__columns-item_svg path{
+                stroke: var(--yellow-white);
+            }
+
+            svg circle {
+                stroke: var(--yellow-white);
+            }
+
+            .call-light {
+                display: none;
+            }
+
         }
     }
 
@@ -114,6 +131,7 @@
         &_title {
             font-weight: 600;
             font-size: var(--form-size);
+            color: #fff;
         }
 
         &_subtitle {
@@ -214,6 +232,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex: 0 0 40px;
             }
         }
 
@@ -245,4 +264,10 @@
             }
         }
     }
+}
+body.light .call-light {
+    display: block;
+}
+body.light .call-dark {
+    display: none;
 }

@@ -26,7 +26,7 @@
 
         &_content {
             border-radius: 0 var(--radius) var(--radius) var(--radius);
-            border: 1px solid var(--yellow);
+            border: 1px solid var(--yellow-blue);
             padding: 20px 20px 30px;
             margin-top: 10px;
         }
@@ -34,17 +34,18 @@
         &_name {
             font-weight: 600;
             font-size: var(--card-subtitle);
+            color: var(--white-blue);
         }
 
         &_position {
-            color: var(--yellow);
+            color: var(--yellow-aaa);
             margin: 20px 0px;
         }
 
         &_text {
             font-size: var(--textMedMobileSize);
             line-height: var(--min-title-mobile-line-height);
-            color: var(--gray-70);
+            color: var(--gray-70-555);
         }
     }
 

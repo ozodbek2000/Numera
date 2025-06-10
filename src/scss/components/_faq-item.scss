@@ -1,5 +1,5 @@
 .faq-item {
-    border-bottom: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--yellow-navy);
     user-select: none;
 
     .question {
@@ -10,6 +10,12 @@
         gap: 20px;
         padding: 20px 0px;
         cursor: pointer;
+        svg path {
+            stroke: var(--yellow-navy);
+        }
+        svg {
+            flex: 0 0 26px;
+        }
     }    
 
     .answer {

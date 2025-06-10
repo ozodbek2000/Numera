@@ -4,7 +4,7 @@
     }
 
     &__title {
-        color: var(--yellow);
+        color: var(--yellow-blue);
     }
 
     &__columns {
@@ -17,6 +17,7 @@
     &__questions {
         display: flex;
         flex-direction: column;
+        color: var(--white-navy);
     }
 
     &__button {
