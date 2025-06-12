@@ -1,0 +1,121 @@
+.mission {
+
+    &__container {
+        position: relative;
+    }
+
+    &__about {
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 200px;
+        padding-bottom: 323px;
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+                span {
+                    margin-top: -8px;
+                }
+            }
+        }
+        .text {
+            font-size: 16px;
+            color: var(--white-blue-05);
+        }
+    }
+
+    &__grid-about {
+
+        &_title {
+            margin-bottom: 30px;
+        }
+
+        &_text {
+
+        }
+    }
+
+    &__bg {
+        img {
+            width: 100%;
+            max-width: 833px;
+            position: absolute;
+            bottom: 0;
+            left: -7.5%;
+        }
+    }
+
+    @media (max-width: 1080px) {
+        &__container {
+            position: relative;
+        }
+
+        &__about {
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 200px;
+            padding-bottom: 85px;
+
+            &_list {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                li {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 15px;
+                    span {
+                        margin-top: -8px;
+                    }
+                }
+            }
+            .text {
+                font-size: 16px;
+                color: var(--white-blue-05);
+            }
+        }
+
+        &__grid-about {
+
+            &:nth-child(1) {
+                order: 0;
+            }
+            &:nth-child(2) {
+                order: 2;
+            }
+            &:nth-child(3) {
+                order: 3;
+            }
+
+            &_title {
+                margin: 10px 0px 24px 0px;
+            }
+
+            &_text {
+                line-height: 1.7;
+            }
+        }
+
+        &__bg {
+            order: 0;
+            img {
+                width: 100%;
+                max-width: 833px;
+                position: relative;
+                bottom: 0;
+                left: -15%;
+            }
+        }
+    }
+}

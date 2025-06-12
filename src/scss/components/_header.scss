@@ -1,4 +1,9 @@
 .header {
+
+    &.about-header {
+        background-color: transparent;
+    }
+
     padding: 20px 0px;
     background-color: var(--navy-white);
     transition: 0.3s ease all;
@@ -88,6 +93,13 @@
         }
 
         &__nav {
+
+            &_item {
+                a {
+                    color: #fff;
+                    transition: 0.3s ease all;
+                }
+            }
 
             flex: inherit;
             

@@ -225,6 +225,7 @@
                 font-size: var(--mobileTitle-size);
                 border-radius: var(--radius);
                 cursor: pointer;
+                transition: 0.3s ease all;
                 &.active {
                     background-color: var(--blue);
                     border-color: var(--blue);

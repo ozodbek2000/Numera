@@ -13,20 +13,20 @@
                     <div class="calc__inputs_box-input">
                         <label for="#">Форма собственности</label>
                         @@include('../components/dropdown-simple.html', {
-                            "items": "<li class='dropdown__item'><a href='##'>ООО</a></li><li class='dropdown__item'><a href='##'>ИП</a></li><li class='dropdown__item'><a href='##'>АО</a></li><li class='dropdown__item'><a href='##'>НКО</a></li>"
+                            "items": "<li><a href='##'>ИП</a></li><li><a href='##'>ООО</a></li><li><a href='##'>АО</a></li><li><a href='##'>НКО</a></li>"
                         })
                     </div>
                     <div class="calc__inputs_box-input">
                         <label for="#">Организационная форма</label>
                         @@include('../components/dropdown-simple.html', {
-                            "items": "<li class='dropdown__item'><a href='##'>УСН</a></li><li class='dropdown__item'><a href='##'>ОСНО</a></li><li class='dropdown__item'><a href='##'>ПАТЕНТ</a></li><li class='dropdown__item'><a href='##'>УСН+ПАТЕНТ</a></li><li class='dropdown__item'><a href='##'>ОСНО+ПАТЕНТ</a></li><li class='dropdown__item'><a href='##'>ECXH</a></li>"
+                            "items": "<li><a href='##'>УСН</a></li><li><a href='##'>ОСНО</a></li><li><a href='##'>ПАТЕНТ</a></li>"
                         })
                     </div>
                 </div>
                 <div class="calc__inputs_form">
                     <label for="#">Форма собственности</label>
                     @@include('../components/dropdown-simple.html', {
-                        "items": "<li class='dropdown__item'><a href='##'>Услуги и ИТ</a></li><li class='dropdown__item'><a href='##'>Торговля</a></li><li class='dropdown__item'><a href='##'>Производство</a></li><li class='dropdown__item'><a href='##'>Строительство</a></li><li class='dropdown__item'><a href='##'>УК</a></li><li class='dropdown__item'><a href='##'>ТСЖ</a></li><li class='dropdown__item'><a href='##'>Общепит</a></li><li class='dropdown__item'><a href='##'>Мини-кафе, пекарни, вендинг</a></li>"
+                        "items": "<li><a href='##'>Услуги и ИТ</a></li><li><a href='##'>Торговля</a></li><li><a href='##'>Производство</a></li><li><a href='##'>Строительство</a></li><li><a href='##'>Управляющие компании и ТСЖ</a></li><li><a href='##'>Общепит</a></li><li><a href='##'>Мини-кафе, пекарни, вендинг</a></li>"
                     })
                 </div>
                 <div class="calc__inputs_box calc__inputs_box--2">
@@ -106,18 +106,18 @@
                         </div>
                     </div>
                     <div class="calc__content_inputs">
-                        <input type="text" placeholder="Имя">
+                        <input type="text" id="userName" placeholder="Имя">
                         <div class="calc__content_inputs-box">
-                            <input type="email" placeholder="Email">
-                            <input type="tel" placeholder="+998" value="+998">
+                            <input type="email" id="userEmail" placeholder="Email">
+                            <input type="tel" id="userPhone" placeholder="+998" value="+998">
                         </div>
                         <label> 
-                            <input type="checkbox"> 
+                            <input type="checkbox" id="autoRenew"> 
                             Соглашаюсь на автопродление текущего тарифа
                         </label>
                         <div class="calc__content_buttons">
-                            <a class="calc__content_pay" href="##">Оплатить сейчас</a>
-                            <a class="calc__content_cons button" href="##" class="button">Нужна консультация</a>
+                            <a id="payNow" class="calc__content_pay" href="##">Оплатить сейчас</a>
+                            <a id="needHelp" class="calc__content_cons button" href="##" class="button">Нужна консультация</a>
                         </div>
                         <div class="calc__content_info">Нажимая на кнопку «Нужна консультация», «Оплатить сейчас», я даю Согласие на обработку и Согласие на распространение персональных данных.</div>
                         <div class="calc__content_info">Нажимая на кнопку «Оплатить сейчас», я принимаю Публичную оферту о заключении абонентского договора об оказании услуг бухгалтерского сопровождения полностью и без оговорок.</div>

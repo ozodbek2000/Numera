@@ -70,6 +70,28 @@
 .desktop-only {
 
 }
+.yellow-button {
+    background-color: var(--bright-yellow);
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    color: var(--blue);
+    display: inline-flex;
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+body.light .only-dark {
+    display: none;
+}
+.only-light {
+    display: none;
+}
+body.light .only-light {
+    display: block;
+}
+
 @media (max-width: 1080px) {
     .mobile-only {
         display: inherit;
