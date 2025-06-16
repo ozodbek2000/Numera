@@ -81,6 +81,8 @@
     display: inline-flex;
     border-radius: var(--radius);
     font-weight: 500;
+    cursor: pointer;
+    user-select: none;
 }
 body.light .only-dark {
     display: none;
