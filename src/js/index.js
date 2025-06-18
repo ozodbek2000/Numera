@@ -27,6 +27,34 @@ $(document).ready(function () {
     $(".faq-item").click(function (event) {
         $(this).toggleClass("active");
     });
+    //READ MORE 
+    const MAX_CHARS = 180;
+
+    $(".story__slide_text").each(function() {
+        const $text = $(this);
+        const fullText = $text.text();
+        
+        if (fullText.length > MAX_CHARS) {
+            const truncated = fullText.substring(0, MAX_CHARS) + '...';
+            $text.html(truncated + '<span class="read-more">Читать дальше</span>');
+            $text.data('full-text', fullText);
+        }
+    });
+
+    $(document).on('click', '.story__slide_text .read-more, .story__slide_text .read-less', function() {
+        const $container = $(this).parent();
+        const fullText = $container.data('full-text');
+        
+        if ($container.hasClass('expanded')) {
+            const truncated = fullText.substring(0, MAX_CHARS) + '...';
+            $container.html(truncated + '<span class="read-more">Читать дальше</span>');
+        } else {
+            $container.html(fullText + '<span class="read-less"> Свернуть</span>');
+        }
+        
+        $container.toggleClass('expanded');
+    });
+    //READ MORE 
     dropdown();
     dropdownSimple();
     if ($(window).width() < 1080) {
@@ -237,12 +265,6 @@ $(document).ready(function () {
         return /^\+998\d{9}$/.test(cleaned);
     }
 
-    // Проверка email
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
     function sendToBot(actionType) {
         if (alreadySent) return;
 
@@ -259,13 +281,6 @@ $(document).ready(function () {
         if (!isValidUzbekPhone(phone)) {
             alert(
                 "❗ Пожалуйста, введите корректный номер телефона в формате +998 XX XXX XX XX"
-            );
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            alert(
-                "❗ Пожалуйста, введите корректный Email (пример: example@mail.com)"
             );
             return;
         }
@@ -332,9 +347,6 @@ $(document).ready(function () {
     }
 
     // Валидации
-    function isValidEmail(email) {
-        return /^[\w.-]+@[\w.-]+\.\w{2,}$/.test(email);
-    }
     function isValidUzbekPhone(phone) {
         return /^\+998 \d{2} \d{3} \d{2} \d{2}$/.test(phone);
     }
@@ -395,12 +407,146 @@ $(document).ready(function () {
                 return showError($("#contactSurname"), "Введите фамилию");
             if (!isValidUzbekPhone(phone))
                 return showError($("#contactPhone"), "Неверный номер телефона");
-            if (!isValidEmail(email))
-                return showError($("#contactEmail"), "Неверный email");
 
             sendToTelegram({ name, surname, phone, email }, $form);
         });
     });
-});
 
-console.log("Gulp Webpack сборка работает!");
+    //CALCULATOR LOGIC
+    let selectedMonths = 3; // по умолчанию 3 месяца
+
+    function parseMonths(text) {
+        if (text.includes("год")) return 12;
+        let m = text.match(/\d+/);
+        return m ? parseInt(m[0]) : 3;
+    }
+
+    function updatePrice() {
+        let formaSobst = $(".calc__inputs_box-input")
+            .eq(0)
+            .find(".dropdown-simple > a > span")
+            .text()
+            .trim();
+        let orgForma = $(".calc__inputs_box-input")
+            .eq(1)
+            .find(".dropdown-simple > a > span")
+            .text()
+            .trim();
+        let vidDeyat = $(".calc__inputs_form .dropdown-simple > a > span")
+            .text()
+            .trim();
+
+        let kolSotrudnikov =
+            parseInt(
+                $(".calc__inputs_box--2").find("input[type=number]").eq(0).val()
+            ) || 0;
+        let oborot =
+            parseInt(
+                $(".calc__inputs_box--2").find("input[type=number]").eq(1).val()
+            ) || 0;
+
+        let basePrice = 500000;
+
+        let formaCoef = 1;
+        switch (formaSobst) {
+            case "ИП":
+                formaCoef = 0.8;
+                break;
+            case "ООО":
+                formaCoef = 1;
+                break;
+            case "АО":
+                formaCoef = 1.2;
+                break;
+            case "НКО":
+                formaCoef = 0.9;
+                break;
+        }
+
+        let orgCoef = 1;
+        switch (orgForma) {
+            case "УСН":
+                orgCoef = 0.85;
+                break;
+            case "ОСНО":
+                orgCoef = 1;
+                break;
+            case "ПАТЕНТ":
+                orgCoef = 0.7;
+                break;
+        }
+
+        let vidCoef = 1;
+        switch (vidDeyat) {
+            case "Услуги и ИТ":
+                vidCoef = 0.9;
+                break;
+            case "Торговля":
+                vidCoef = 1;
+                break;
+            case "Производство":
+                vidCoef = 1.3;
+                break;
+            case "Строительство":
+                vidCoef = 1.2;
+                break;
+            case "Управляющие компании и ТСЖ":
+                vidCoef = 1;
+                break;
+            case "Общепит":
+                vidCoef = 1.1;
+                break;
+            case "Мини-кафе, пекарни, вендинг":
+                vidCoef = 1.05;
+                break;
+        }
+
+        let pricePerMonth = basePrice + kolSotrudnikov * 100000 + oborot * 0.05;
+        pricePerMonth = pricePerMonth * formaCoef * orgCoef * vidCoef;
+
+        let totalPrice = pricePerMonth * selectedMonths;
+
+        let priceFormatted = pricePerMonth
+            .toFixed(0)
+            .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        let totalFormatted = totalPrice
+            .toFixed(0)
+            .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+        $(".calc__content_content-price span").text(priceFormatted + " сум");
+        $(".calc__content_content-price p").text("в месяц при оплате");
+        $(".calc__content_content-price div").text(
+            totalFormatted +
+                " сум за " +
+                (selectedMonths === 12 ? "год" : selectedMonths + " месяца")
+        );
+    }
+
+    // Выбор месяца
+    $(".calc__content_months span").on("click", function () {
+        $(".calc__content_months span").removeClass("active");
+        $(this).addClass("active");
+
+        selectedMonths = parseMonths($(this).text());
+        updatePrice();
+    });
+
+    // Выбор в дропдаунах
+    $(".dropdown-simple_list li a").on("click", function (e) {
+        e.preventDefault();
+        let selectedText = $(this).text();
+        $(this)
+            .closest(".dropdown-simple")
+            .find("> a > span")
+            .text(selectedText);
+        updatePrice();
+    });
+
+    // Ввод чисел
+    $(".calc__inputs_box--2 input[type=number]").on("input", function () {
+        updatePrice();
+    });
+
+    // Инициалный запуск
+    updatePrice();
+});

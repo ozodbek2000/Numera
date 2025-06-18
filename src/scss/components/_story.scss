@@ -46,6 +46,11 @@
             font-size: var(--textMedMobileSize);
             line-height: var(--min-title-mobile-line-height);
             color: var(--gray-70-555);
+            span {
+                color: var(--yellow-blue);
+                cursor: pointer;
+                white-space: nowrap;
+            }
         }
     }
 
