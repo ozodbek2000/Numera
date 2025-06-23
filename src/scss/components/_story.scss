@@ -46,10 +46,16 @@
             font-size: var(--textMedMobileSize);
             line-height: var(--min-title-mobile-line-height);
             color: var(--gray-70-555);
+            p {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
             span {
-                color: var(--yellow-blue);
-                cursor: pointer;
-                white-space: nowrap;
+            color: var(--yellow-blue);
+            cursor: pointer;
+            white-space: nowrap;
             }
         }
     }

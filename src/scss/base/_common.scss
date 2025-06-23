@@ -84,6 +84,17 @@
     cursor: pointer;
     user-select: none;
 }
+.button-transparent {
+    font-size: var(--textSize);
+    color: #fff;
+    height: 60px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 0px 83px;
+}
 body.light .only-dark {
     display: none;
 }

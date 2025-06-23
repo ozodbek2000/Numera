@@ -1,0 +1,22 @@
+<!-- src/html/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Numera</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../img/png/favicon.png" />
+    </head>
+    <body>
+        @@include('../components/header.html', { "class": "about-header", })
+
+        <main class="wrapper">
+            @@include('../components/feedback.html')
+        </main>
+
+        @@include('../components/footer.html')
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

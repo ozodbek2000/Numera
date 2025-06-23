@@ -27,34 +27,12 @@ $(document).ready(function () {
     $(".faq-item").click(function (event) {
         $(this).toggleClass("active");
     });
-    //READ MORE 
-    const MAX_CHARS = 180;
-
-    $(".story__slide_text").each(function() {
-        const $text = $(this);
-        const fullText = $text.text();
-        
-        if (fullText.length > MAX_CHARS) {
-            const truncated = fullText.substring(0, MAX_CHARS) + '...';
-            $text.html(truncated + '<span class="read-more">Читать дальше</span>');
-            $text.data('full-text', fullText);
-        }
+    //READ MORE
+    $(".story__slide_text > span").on("click", function() {
+        $(this).siblings('p').css('-webkit-line-clamp', 'unset');
+        $(this).hide();
     });
-
-    $(document).on('click', '.story__slide_text .read-more, .story__slide_text .read-less', function() {
-        const $container = $(this).parent();
-        const fullText = $container.data('full-text');
-        
-        if ($container.hasClass('expanded')) {
-            const truncated = fullText.substring(0, MAX_CHARS) + '...';
-            $container.html(truncated + '<span class="read-more">Читать дальше</span>');
-        } else {
-            $container.html(fullText + '<span class="read-less"> Свернуть</span>');
-        }
-        
-        $container.toggleClass('expanded');
-    });
-    //READ MORE 
+    //READ MORE
     dropdown();
     dropdownSimple();
     if ($(window).width() < 1080) {
