@@ -1,0 +1,728 @@
+<!-- src/html/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Numera</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../img/png/favicon.png" />
+    </head>
+    <body>
+        <header class="header about-header">
+    <div class="header__container">
+        <a href="/index.html" class="header__logo">
+            <svg width="150" height="50" viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="150" height="50" fill="url(#pattern0_282_5493)"/>
+                <defs>
+                <pattern id="pattern0_282_5493" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_282_5493" transform="matrix(0.00266667 0 0 0.008 -0.22 -1.5)"/>
+                </pattern>
+                <image id="image0_282_5493" width="500" height="500" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                </defs>
+            </svg>
+        </a>
+        <nav class="header__nav active">
+            <ul class="header__nav_list">
+                <li class="header__nav_item active"><a href="/index.html">Главная</a></li>
+                <li class="header__nav_item"><a href="/about.html">О компании</a></li>
+                <li class="header__nav_item"><a href="/service.html">Услуги</a></li>
+                <li class="header__nav_item"><a href="##">Отзывы</a></li>
+                <li class="header__nav_item"><a href="##">Блог</a></li>
+                <li class="header__nav_item"><a href="##">Контакты</a></li>
+            </ul>
+            <div class="header__arrow">
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.66654 1L1.2558 5.41074C0.93036 5.73618 0.93036 6.26382 1.2558 6.58926L5.66654 11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </nav>
+        <div class="header__lang">
+            <div class="header__lang_item active">
+                <img src="../img/svg/rus.svg" alt="#">
+                Ру
+            </div>
+            <div class="header__lang_item">
+                <img src="../img/svg/uzb.svg" alt="#">
+                Uz
+            </div>
+        </div>
+        <div class="header__theme">
+            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.7461 19.6992C16.8828 19.6992 20.1875 16.3945 20.1875 12.2695C20.1875 8.15625 16.8594 4.85156 12.7344 4.85156C8.62109 4.85156 5.33984 8.14453 5.33984 12.2695C5.33984 16.4062 8.63281 19.6992 12.7461 19.6992ZM12.7461 17.7422C9.71094 17.7422 7.28516 15.3281 7.28516 12.2695C7.28516 9.22266 9.69922 6.79688 12.7344 6.79688C15.7812 6.79688 18.2305 9.23438 18.2305 12.2695C18.2305 15.3164 15.8047 17.7422 12.7461 17.7422ZM12.7812 2.4375C13.4492 2.4375 13.9883 1.89844 13.9883 1.21875C13.9883 0.539062 13.4492 0 12.7812 0C12.1016 0 11.5625 0.539062 11.5625 1.21875C11.5625 1.89844 12.1016 2.4375 12.7812 2.4375ZM18.3008 3.92578C18.9688 3.92578 19.5078 3.38672 19.5078 2.70703C19.5078 2.02734 18.9688 1.48828 18.3008 1.48828C17.6211 1.48828 17.082 2.02734 17.082 2.70703C17.082 3.38672 17.6211 3.92578 18.3008 3.92578ZM22.3555 7.96875C23.0234 7.96875 23.5625 7.42969 23.5625 6.75C23.5625 6.07031 23.0234 5.53125 22.3555 5.53125C21.6758 5.53125 21.1367 6.07031 21.1367 6.75C21.1367 7.42969 21.6758 7.96875 22.3555 7.96875ZM23.8438 13.5C24.5117 13.5 25.0508 12.9609 25.0508 12.2812C25.0508 11.6016 24.5117 11.0625 23.8438 11.0625C23.1641 11.0625 22.625 11.6016 22.625 12.2812C22.625 12.9609 23.1641 13.5 23.8438 13.5ZM22.3555 19.0312C23.0234 19.0312 23.5625 18.4922 23.5625 17.8125C23.5625 17.1328 23.0234 16.5938 22.3555 16.5938C21.6758 16.5938 21.1367 17.1328 21.1367 17.8125C21.1367 18.4922 21.6758 19.0312 22.3555 19.0312ZM18.3008 23.0742C18.9688 23.0742 19.5078 22.5352 19.5078 21.8555C19.5078 21.1758 18.9688 20.6367 18.3008 20.6367C17.6211 20.6367 17.082 21.1758 17.082 21.8555C17.082 22.5352 17.6211 23.0742 18.3008 23.0742ZM12.7812 24.5625C13.4492 24.5625 13.9883 24.0117 13.9883 23.3438C13.9883 22.6641 13.4492 22.125 12.7812 22.125C12.1016 22.125 11.5625 22.6641 11.5625 23.3438C11.5625 24.0117 12.1016 24.5625 12.7812 24.5625ZM7.26172 23.0742C7.92969 23.0742 8.48047 22.5352 8.48047 21.8555C8.48047 21.1758 7.92969 20.6367 7.26172 20.6367C6.58203 20.6367 6.04297 21.1758 6.04297 21.8555C6.04297 22.5352 6.58203 23.0742 7.26172 23.0742ZM3.20703 19.0312C3.875 19.0312 4.42578 18.4922 4.42578 17.8125C4.42578 17.1328 3.875 16.5938 3.20703 16.5938C2.52734 16.5938 1.98828 17.1328 1.98828 17.8125C1.98828 18.4922 2.52734 19.0312 3.20703 19.0312ZM1.71875 13.5C2.39844 13.5 2.9375 12.9609 2.9375 12.2812C2.9375 11.6016 2.39844 11.0625 1.71875 11.0625C1.03906 11.0625 0.5 11.6016 0.5 12.2812C0.5 12.9609 1.03906 13.5 1.71875 13.5ZM3.20703 7.96875C3.875 7.96875 4.42578 7.42969 4.42578 6.75C4.42578 6.07031 3.875 5.53125 3.20703 5.53125C2.52734 5.53125 1.98828 6.07031 1.98828 6.75C1.98828 7.42969 2.52734 7.96875 3.20703 7.96875ZM7.26172 3.92578C7.92969 3.92578 8.48047 3.38672 8.48047 2.70703C8.48047 2.02734 7.92969 1.48828 7.26172 1.48828C6.58203 1.48828 6.04297 2.02734 6.04297 2.70703C6.04297 3.38672 6.58203 3.92578 7.26172 3.92578Z" fill="#FFB927"/>
+            </svg>
+        </div>
+        <a href="#support-form" class="header__contact">Поговорить с бухгалтером</a>
+    </div>
+</header>
+
+
+        <main class="wrapper">
+            <section class="feed">
+    <div class="feed__container">
+        <div class="feed__top">
+            <div class="feed__top_rate">
+                <div class="feed__top_rate-stars">
+                    <img src="../img/svg/star.svg" alt="#">
+                    <img src="../img/svg/star.svg" alt="#">
+                    <img src="../img/svg/star.svg" alt="#">
+                    <img src="../img/svg/star.svg" alt="#">
+                    <img src="../img/svg/half-star.svg" alt="#">
+                </div>
+                <div class="feed__top_rate-num">100+</div>
+                <div class="feed__top_rate-title">Отзывы...</div>
+                <div class="feed__top_rate-text">Нас выбирают бизнесы по всей стране!</div>
+                <a href="##" class="feed__top_rate-btn">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="29.5" stroke="white"/>
+                        <path d="M26.5695 22.487L37.2999 22.487L37.2999 33.2173" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22.2746 37.513L37.1504 22.6373" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="feed__top_content">
+                <div class="feed__top_content-numera numera">#services</div>
+                <div class="feed__top_content-title title">Бухгалтерия под контролем. Растите — мы берём рутину на себя</div>
+                <div class="feed__top_content-text text">Мы предоставляем комплексное бухгалтерское сопровождение для малого и среднего бизнеса. Все наши услуги нацелены на то, чтобы вы могли сосредоточиться на главном — росте своего бизнеса, не отвлекаясь на бумажную рутину.</div>
+                <div class="feed__top_content-buttons">
+                    <a href="##" class="feed__top_content-yellow-btn yellow-button">Получить консультацию</a>
+                    <a href="##" class="feed__top_content-contact-btn button-transparent">Контакты</a>
+                </div>
+            </div>
+        </div>
+        <div class="feed__bottom">
+            <div class="feed__bottom_together">
+                <div class="feed__bottom_together-title">Вместе — сильнее. Станьте частью партнёрской сети Numera</div>
+                <a href="##" class="feed__bottom_together-button">Присоединиться сейчас</a>
+                <img class="desktop-only" src="../img/png/bottom01.png" alt="#">
+                <img class="mobile-only" src="../img/png/bottom-mobile01.png" alt="">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2007_5922)">
+                    <path d="M7.32862 2.3797L20.0464 2.3797L20.0464 15.0975" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.23719 20.1888L19.8682 2.5578" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2007_5922">
+                    <rect width="22" height="22" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>                    
+            </div>
+            <div class="feed__bottom_video">
+                <img src="../img/jpg/video01.jpg" alt="#">
+                <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_426_2415)">
+                    <path d="M37.5205 0.020813C16.8101 0.020813 0.0205078 16.8101 0.0205078 37.5208C0.0205078 58.2315 16.8101 75.0208 37.5205 75.0208C58.2309 75.0208 75.0205 58.2315 75.0205 37.5208C75.0205 16.8101 58.2309 0.020813 37.5205 0.020813ZM50.4814 39.5086L31.7314 51.2274C31.3521 51.4642 30.9207 51.5833 30.4893 51.5833C30.0984 51.5833 29.707 51.486 29.3528 51.2892C28.6078 50.8761 28.1455 50.0921 28.1455 49.2396V25.8021C28.1455 24.9495 28.6078 24.1655 29.3528 23.7525C30.0979 23.337 31.0088 23.3622 31.7314 23.8143L50.4814 35.533C51.1664 35.9622 51.583 36.713 51.583 37.5208C51.583 38.3287 51.1664 39.0796 50.4814 39.5086Z" fill="#FFB927"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_426_2415">
+                    <rect width="75" height="75" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="advan">
+    <div class="advan__container">
+        <div class="advan__grid_swiper swiper-container">
+            
+            <div class="advan__grid swiper-wrapper">
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/card.svg" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Ведение бухгалтерии</div>
+                        <div class="advan__grid_subtitle">Полное ведение бухгалтерии</div>
+                        <div class="advan__grid_text text">Мы берём на себя всё: от ввода первичных документов до составления бухгалтерской и налоговой отчётности. Независимо от системы налогообложения и масштаба бизнеса — мы обеспечим порядок в ваших цифрах.</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/png/user-tick.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Консультации</div>
+                        <div class="advan__grid_subtitle">Полное ведение бухгалтерии</div>
+                        <div class="advan__grid_text text">Нужна помощь в расчётах, оформлении документов или переходе на другую систему налогообложения? Мы проконсультируем вас по всем вопросам бухгалтерии и налогов.</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/search.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Сдача отчётности</div>
+                        <div class="advan__grid_subtitle">Подготовка и сдача отчётности</div>
+                        <div class="advan__grid_text text">Забудьте о сроках и штрафах — мы точно и вовремя сдадим всю необходимую налоговую, статистическую и внебюджетную отчётность за вас.</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4502 30L26.4752 36.05L38.5502 23.95" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.3752 6.12505C28.1002 4.65005 30.9252 4.65005 32.6752 6.12505L36.6252 9.52505C37.3752 10.175 38.7752 10.7 39.7752 10.7H44.0252C46.6752 10.7 48.8502 12.875 48.8502 15.525V19.775C48.8502 20.75 49.3752 22.175 50.0252 22.925L53.4252 26.875C54.9002 28.6 54.9002 31.4251 53.4252 33.1751L50.0252 37.1251C49.3752 37.8751 48.8502 39.2751 48.8502 40.2751V44.525C48.8502 47.175 46.6752 49.35 44.0252 49.35H39.7752C38.8002 49.35 37.3752 49.875 36.6252 50.525L32.6752 53.925C30.9502 55.4 28.1252 55.4 26.3752 53.925L22.4252 50.525C21.6752 49.875 20.2752 49.35 19.2752 49.35H14.9502C12.3002 49.35 10.1252 47.175 10.1252 44.525V40.2501C10.1252 39.2751 9.60019 37.8751 8.97519 37.1251L5.6002 33.1501C4.1502 31.4251 4.1502 28.6251 5.6002 26.9001L8.97519 22.925C9.60019 22.175 10.1252 20.775 10.1252 19.8V15.5C10.1252 12.85 12.3002 10.675 14.9502 10.675H19.2752C20.2502 10.675 21.6752 10.15 22.4252 9.50005L26.3752 6.12505Z" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                         
+                        </div>
+                        <div class="advan__grid_title title">Аутсорсинг «под ключ»</div>
+                        <div class="advan__grid_subtitle">Полное ведение бухгалтерии</div>
+                        <div class="advan__grid_text text">Передайте бухгалтерию под наш полный контроль. Мы станем вашим удалённым финансовым отделом, полностью сопровождая бизнес от начала до конца.</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/card.svg" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Восстановление бухгалтерии</div>
+                        <div class="advan__grid_subtitle">Когда учёт запущен — мы всё вернём в норму</div>
+                        <div class="advan__grid_text text">Вернём в порядок все документы и отчёты — даже если учёт не вёлся годами. Без паники, без штрафов, с результатом</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/png/user-tick.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Экспресс аудит бухгалтерии</div>
+                        <div class="advan__grid_subtitle">Быстрая проверка — максимум пользы</div>
+                        <div class="advan__grid_text text">Быстрая и точная проверка: найдём слабые места, предотвратим ошибки и оптимизируем учёт</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/search.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Корректировка и пересдача отчетности</div>
+                        <div class="advan__grid_subtitle">Исправим старые ошибки без новых проблем</div>
+                        <div class="advan__grid_text text">Нашли ошибки в старых отчётах? Исправим и пересдадим по всем правилам — в срок и без последствий</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4502 30L26.4752 36.05L38.5502 23.95" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.3752 6.12505C28.1002 4.65005 30.9252 4.65005 32.6752 6.12505L36.6252 9.52505C37.3752 10.175 38.7752 10.7 39.7752 10.7H44.0252C46.6752 10.7 48.8502 12.875 48.8502 15.525V19.775C48.8502 20.75 49.3752 22.175 50.0252 22.925L53.4252 26.875C54.9002 28.6 54.9002 31.4251 53.4252 33.1751L50.0252 37.1251C49.3752 37.8751 48.8502 39.2751 48.8502 40.2751V44.525C48.8502 47.175 46.6752 49.35 44.0252 49.35H39.7752C38.8002 49.35 37.3752 49.875 36.6252 50.525L32.6752 53.925C30.9502 55.4 28.1252 55.4 26.3752 53.925L22.4252 50.525C21.6752 49.875 20.2752 49.35 19.2752 49.35H14.9502C12.3002 49.35 10.1252 47.175 10.1252 44.525V40.2501C10.1252 39.2751 9.60019 37.8751 8.97519 37.1251L5.6002 33.1501C4.1502 31.4251 4.1502 28.6251 5.6002 26.9001L8.97519 22.925C9.60019 22.175 10.1252 20.775 10.1252 19.8V15.5C10.1252 12.85 12.3002 10.675 14.9502 10.675H19.2752C20.2502 10.675 21.6752 10.15 22.4252 9.50005L26.3752 6.12505Z" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                         
+                        </div>
+                        <div class="advan__grid_title title">Снижение текущих затрат на бухгалтерию</div>
+                        <div class="advan__grid_subtitle">Больше эффективности — меньше расходов</div>
+                        <div class="advan__grid_text text">Оптимизируем бухгалтерские процессы и расходы. Вы платите только за нужное — без лишнего</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/card.svg" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Разработка учетной политики</div>
+                        <div class="advan__grid_subtitle">Основа вашего учёта — оформим грамотно</div>
+                        <div class="advan__grid_text text">Создадим систему учёта под ваш бизнес. Формализуем подходы и обеспечим соответствие требованиям законодательства</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/search.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Расчет зарплаты и кадровый учет</div>
+                        <div class="advan__grid_subtitle">Всё по людям: ЗП, отчёты, приказы</div>
+                        <div class="advan__grid_text text">Своевременные начисления, отчётность и ведение кадров — от приёма до увольнения</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/search.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Инхаус бухгалтер</div>
+                        <div class="advan__grid_subtitle">Постоянный специалист в вашей команде</div>
+                        <div class="advan__grid_text text">Выделим бухгалтера под ваш бизнес. Постоянная поддержка, быстрые ответы и полное погружение в процессы</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4502 30L26.4752 36.05L38.5502 23.95" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.3752 6.12505C28.1002 4.65005 30.9252 4.65005 32.6752 6.12505L36.6252 9.52505C37.3752 10.175 38.7752 10.7 39.7752 10.7H44.0252C46.6752 10.7 48.8502 12.875 48.8502 15.525V19.775C48.8502 20.75 49.3752 22.175 50.0252 22.925L53.4252 26.875C54.9002 28.6 54.9002 31.4251 53.4252 33.1751L50.0252 37.1251C49.3752 37.8751 48.8502 39.2751 48.8502 40.2751V44.525C48.8502 47.175 46.6752 49.35 44.0252 49.35H39.7752C38.8002 49.35 37.3752 49.875 36.6252 50.525L32.6752 53.925C30.9502 55.4 28.1252 55.4 26.3752 53.925L22.4252 50.525C21.6752 49.875 20.2752 49.35 19.2752 49.35H14.9502C12.3002 49.35 10.1252 47.175 10.1252 44.525V40.2501C10.1252 39.2751 9.60019 37.8751 8.97519 37.1251L5.6002 33.1501C4.1502 31.4251 4.1502 28.6251 5.6002 26.9001L8.97519 22.925C9.60019 22.175 10.1252 20.775 10.1252 19.8V15.5C10.1252 12.85 12.3002 10.675 14.9502 10.675H19.2752C20.2502 10.675 21.6752 10.15 22.4252 9.50005L26.3752 6.12505Z" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                         
+                        </div>
+                        <div class="advan__grid_title title">Кадровый аудит</div>
+                        <div class="advan__grid_subtitle">Проверим, насколько чист ваш HR-документооборот</div>
+                        <div class="advan__grid_text text">Анализ, структура, порядок: проверим кадровые документы и устраним риски</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/card.svg" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Получение ПИНФЛ</div>
+                        <div class="advan__grid_subtitle">Быстрый ПИНФЛ — без бумажной волокиты</div>
+                        <div class="advan__grid_text text">Быстро оформим ПИНФЛ для сотрудников или физических лиц — без очередей и бюрократии</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/png/user-tick.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Регистация ИП СП ЧП</div>
+                        <div class="advan__grid_subtitle">Старт бизнеса — без лишних шагов</div>
+                        <div class="advan__grid_text text">Подготовим и подадим все документы — быстро, правильно и с учётом ваших задач</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/search.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Налоговая консультация</div>
+                        <div class="advan__grid_subtitle">Понимание налогов начинается с вопроса</div>
+                        <div class="advan__grid_text text">Ответим на вопросы по налогам, отчётности, режимам. Профессионально, понятно, по делу</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4502 30L26.4752 36.05L38.5502 23.95" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.3752 6.12505C28.1002 4.65005 30.9252 4.65005 32.6752 6.12505L36.6252 9.52505C37.3752 10.175 38.7752 10.7 39.7752 10.7H44.0252C46.6752 10.7 48.8502 12.875 48.8502 15.525V19.775C48.8502 20.75 49.3752 22.175 50.0252 22.925L53.4252 26.875C54.9002 28.6 54.9002 31.4251 53.4252 33.1751L50.0252 37.1251C49.3752 37.8751 48.8502 39.2751 48.8502 40.2751V44.525C48.8502 47.175 46.6752 49.35 44.0252 49.35H39.7752C38.8002 49.35 37.3752 49.875 36.6252 50.525L32.6752 53.925C30.9502 55.4 28.1252 55.4 26.3752 53.925L22.4252 50.525C21.6752 49.875 20.2752 49.35 19.2752 49.35H14.9502C12.3002 49.35 10.1252 47.175 10.1252 44.525V40.2501C10.1252 39.2751 9.60019 37.8751 8.97519 37.1251L5.6002 33.1501C4.1502 31.4251 4.1502 28.6251 5.6002 26.9001L8.97519 22.925C9.60019 22.175 10.1252 20.775 10.1252 19.8V15.5C10.1252 12.85 12.3002 10.675 14.9502 10.675H19.2752C20.2502 10.675 21.6752 10.15 22.4252 9.50005L26.3752 6.12505Z" stroke="#FFC357" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                         
+                        </div>
+                        <div class="advan__grid_title title">Ликвидация ИП СПЧП</div>
+                        <div class="advan__grid_subtitle">Закрытие ИП — законно, точно, без стресса</div>
+                        <div class="advan__grid_text text">Закроем предпринимательскую деятельность без штрафов и ошибок. Всё под контролем</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/card.svg" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Проверка контрагентов</div>
+                        <div class="advan__grid_subtitle">Безопасность — до подписания договора</div>
+                        <div class="advan__grid_text text">Проведём юридическую и финансовую проверку ваших партнёров — до подписания договора</div>
+                    </div>
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/png/user-tick.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Услуга возврата НДС</div>
+                        <div class="advan__grid_subtitle">Вернём то, что должно вернуться — НДС</div>
+                        <div class="advan__grid_text text">Подготовим документы и сопроводим процесс возврата НДС — с учётом всех требований</div>
+                    </div>
+                </div>
+                <div class="advan__grid_slide swiper-slide">
+                    <div class="advan__grid_card">
+                        <div class="advan__grid_icon">
+                            <img src="../img/svg/search.png" alt="#">
+                        </div>
+                        <div class="advan__grid_title title">Получение ЭЦП </div>
+                        <div class="advan__grid_subtitle">Цифровая подпись — за вас, под ключ</div>
+                        <div class="advan__grid_text text">Получим для вас электронную подпись и настроим работу с soliq.uz и другими платформами</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="advan__work">
+            <div class="advan__work_images">
+                <div class="advan__work_img">
+                    <img src="../img/jpg/work01.jpg" alt="#">
+                </div>
+                <div class="advan__work_img">
+                    <img src="../img/jpg/work02.jpg" alt="#">
+                </div>
+                <div class="advan__work_img">
+                    <img src="../img/jpg/work03.jpg" alt="#">
+                </div>
+            </div>
+            <div class="advan__work_content">
+                <div class="advan__work_title title">Работаем с любой сферой бизнеса</div>
+                <div class="advan__work_text text">В нашем штате более 300 экспертов с большим опытом. Даже если у вас необычный бизнес, у нас точно найдется специалист в вашей сфере. Мы предоставляем услуги компаниям из самых разных отраслей экономики.</div>
+                <div class="advan__work_btn yellow-button">Связаться с экспертом</div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="consult">
+    <div class="consult__box">
+        <div class="consult__container">
+
+            <div class="consult__cards_container swiper-container">
+                <div class="consult__cards swiper-wrapper">
+                    <div class="consult__card swiper-slide">
+                        <div class="consult__card_image">
+                            <img src="../img/svg/consult01.svg" alt="#" />
+                        </div>
+                        <div class="consult__card_title">
+                            Ведение бухгалтерии
+                        </div>
+                        <div class="consult__card_subtitle">
+                            Полное ведение бухгалтерии
+                        </div>
+                        <div class="consult__card_text">
+                            Берём на себя учёт всех операций — от первички до
+                            отчётности. Любая система налогообложения, порядок в
+                            цифрах гарантирован.
+                        </div>
+                    </div>
+                    <div class="consult__card swiper-slide">
+                        <div class="consult__card_image">
+                            <img src="../img/svg/consult02.svg" alt="#" />
+                        </div>
+                        <div class="consult__card_title">Сдача отчётности</div>
+                        <div class="consult__card_subtitle">
+                            Подготовка и сдача отчётности
+                        </div>
+                        <div class="consult__card_text">
+                            Готовим и сдаём налоговую, статистическую и
+                            внебюджетную отчётность. Без просрочек, штрафов и
+                            головной боли.
+                        </div>
+                    </div>
+                    <div class="consult__card swiper-slide">
+                        <div class="consult__card_image">
+                            <img src="../img/svg/consult03.svg" alt="#" />
+                        </div>
+                        <div class="consult__card_title">Консультации</div>
+                        <div class="consult__card_subtitle">
+                            Полное ведение бухгалтерии
+                        </div>
+                        <div class="consult__card_text">
+                            Помогаем с расчётами, отчётами, переходом на другую
+                            систему. Даем чёткие, практичные ответы — без
+                            «бухгалтерского» языка.
+                        </div>
+                    </div>
+                    <div class="consult__card swiper-slide">
+                        <div class="consult__card_image">
+                            <img src="../img/svg/consult04.svg" alt="#" />
+                        </div>
+                        <div class="consult__card_title">
+                            Аутсорсинг «под ключ»
+                        </div>
+                        <div class="consult__card_subtitle">
+                            Полное ведение бухгалтерии
+                        </div>
+                        <div class="consult__card_text">
+                            Полностью берём на себя бухгалтерию и сопровождение
+                            бизнеса. Вы занимаетесь ростом — мы следим за
+                            цифрами.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="consult__container">
+        <div class="consult__info">
+            <div class="consult__info_item">
+                <div class="consult__info_item-img">
+                    <img src="../img/jpg/info01.jpg" alt="#" />
+                </div>
+                <div class="consult__info_item-content">
+                    <div class="consult__info_item-title title">
+                        Бухгалтерия без головной боли
+                    </div>
+                    <div class="consult__info_item-subtitle">
+                        Бухгалтерия, которая говорит на языке бизнеса
+                    </div>
+                    <div class="consult__info_item-text text">
+                        Профессиональное ведение бухгалтерского и налогового
+                        учёта под реальные задачи вашего бизнеса. Мы фиксируем,
+                        контролируем и упорядочиваем финансы, чтобы вы могли
+                        уверенно масштабироваться
+                    </div>
+                </div>
+            </div>
+            <div class="consult__info_item">
+                <div class="consult__info_item-img">
+                    <img src="../img/jpg/info02.jpg" alt="#" />
+                </div>
+                <div class="consult__info_item-content">
+                    <div class="consult__info_item-title title">
+                        Сдача отчётности
+                    </div>
+                    <div class="consult__info_item-subtitle">
+                        Отчёты вовремя. Всегда.
+                    </div>
+                    <div class="consult__info_item-text text">
+                        Забудьте про дедлайны, формы и платформы. Мы подаём всю
+                        отчётность за вас — точно, своевременно и без ошибок.
+                        Всё, что нужно, — доверить это нам один раз
+                    </div>
+                </div>
+            </div>
+            <div class="consult__info_item">
+                <div class="consult__info_item-img">
+                    <img src="../img/jpg/info03.jpg" alt="#" />
+                </div>
+                <div class="consult__info_item-content">
+                    <div class="consult__info_item-title title">
+                        Консультации
+                    </div>
+                    <div class="consult__info_item-subtitle">
+                        Бухгалтерия — без догадок и сомнений
+                    </div>
+                    <div class="consult__info_item-text text">
+                        Есть вопрос? Мы дадим понятный ответ. Наши эксперты
+                        объяснят сложные вещи простым языком — от налоговой
+                        оптимизации до правильной модели учёта. Примем участие в
+                        принятии финансовых решений
+                    </div>
+                </div>
+            </div>
+            <div class="consult__info_item">
+                <div class="consult__info_item-img">
+                    <img src="../img/jpg/info04.jpg" alt="#" />
+                </div>
+                <div class="consult__info_item-content">
+                    <div class="consult__info_item-title title">
+                        Аутсорсинг «под ключ»
+                    </div>
+                    <div class="consult__info_item-subtitle">
+                        Вся бухгалтерия — в одних надёжных руках
+                    </div>
+                    <div class="consult__info_item-text text">
+                        Полный цикл бухгалтерского сопровождения: от открытия
+                        компании до сдачи отчётов и кадрового учёта. Всё под
+                        ключ, с гарантией, прозрачностью и поддержкой от
+                        выделенной команды
+                    </div>
+                </div>
+            </div>
+            <div class="consult__info_item">
+                <div class="consult__info_item-img">
+                    <img src="../img/jpg/info05.jpg" alt="#" />
+                </div>
+                <div class="consult__info_item-content">
+                    <div class="consult__info_item-numera numera">
+                        #services
+                    </div>
+                    <div class="consult__info_item-title title">
+                        Не знаете, с чего начать?
+                    </div>
+                    <div
+                        class="consult__info_item-subtitle consult__info_item-cta"
+                    >
+                        Оставьте заявку — мы разберёмся в вашем бизнесе и
+                        подскажем подходящее решение.
+                    </div>
+                    <div class="consult__info_item-btn yellow-button">
+                        Узнать, что подойдёт именно вам
+                    </div>
+                </div>
+            </div>
+            <div class="consult__info_item consult__info_item--last">
+                <div class="consult__info_item-img">
+                    <img src="../img/jpg/info06.jpg" alt="#" />
+                </div>
+                <div class="consult__info_item-content">
+                    <div class="consult__info_item-numera numera">
+                        #services
+                    </div>
+                    <div class="consult__info_item-title title">
+                        Мы всегда на связи по телефону и в чате
+                    </div>
+                    <div
+                        class="consult__info_item-text text consult__info_item-text--last"
+                    >
+                        Оперативно поможем с любой ситуацией, будь то срочное
+                        оформление сотрудника или ответ на требование налоговой.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="start">
+    <div class="start__container">
+        <div class="start__numera numera">#services</div>
+        <div class="start__title title-big">Начните работать с профессионалами уже сегодня</div>
+        <div class="start__text text">Пора оставить рутину бухучёта в прошлом. Получите комплексное обслуживание от специалистов, которые действительно заботятся о вашем бизнесе. Мы возьмём на себя все расчёты, отчётность и контроль за сроками, чтобы вы могли спокойно заниматься ростом и развитием вашей компании</div>
+        <a href="##" class="start__button yellow-button-big">Получить консультацию</a>
+    </div>
+</section>
+            <section class="latest">
+    <div class="latest__container">
+        <div class="latest__numera numera">#services</div>
+        <div class="latest__title title">Будьте в курсе последних новостей.</div>
+        <div class="latest__swiper swiper-container">
+            <div class="latest__wrapper swiper-wrapper">
+                <div class="latest__card swiper-slide">
+                    <div class="latest__card_img"><img src="../img/jpg/news01.jpg" alt="#"></div>
+                    <div class="latest__card_title">Что изменится в налогах с июля 2025 года?</div>
+                    <div class="latest__card_text">Кратко о ключевых изменениях в законодательстве, которые коснутся всех предпринимателей. Что важно учесть заранее?</div>
+                    <div class="latest__card_info">
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.875 11.666C6.875 11.3208 7.15482 11.041 7.5 11.041H12.5C12.8452 11.041 13.125 11.3208 13.125 11.666C13.125 12.0112 12.8452 12.291 12.5 12.291H7.5C7.15482 12.291 6.875 12.0112 6.875 11.666Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1.04102C7.84518 1.04102 8.125 1.32084 8.125 1.66602V2.71652C8.6827 2.70768 9.30236 2.70768 9.99079 2.70768H10.0092C10.6976 2.70768 11.3173 2.70768 11.875 2.71652V1.66602C11.875 1.32084 12.1548 1.04102 12.5 1.04102C12.8452 1.04102 13.125 1.32084 13.125 1.66602V2.76067C14.3849 2.83965 15.3529 3.0438 16.1498 3.62281C16.5566 3.91836 16.9143 4.27609 17.2099 4.68288C17.8781 5.6026 18.047 6.75008 18.1005 8.31128C18.125 9.02563 18.125 9.85678 18.125 10.8235V10.8419C18.125 11.8086 18.125 12.6397 18.1005 13.3541C18.047 14.9153 17.8781 16.0628 17.2099 16.9825C16.9143 17.3893 16.5566 17.747 16.1498 18.0426C15.2301 18.7108 14.0826 18.8797 12.5214 18.9332C11.807 18.9577 10.9758 18.9577 10.009 18.9577H9.96227C8.43184 18.9577 7.23217 18.9577 6.2804 18.8546C5.30912 18.7493 4.52213 18.5307 3.8502 18.0426C3.44341 17.747 3.08568 17.3893 2.79013 16.9825C2.30194 16.3106 2.08334 15.5236 1.97811 14.5523C1.87499 13.6005 1.87499 12.4008 1.875 10.8704L1.875 10.8235C1.875 9.85675 1.875 9.02562 1.89947 8.31128C1.95296 6.75008 2.12191 5.60259 2.79013 4.68288C3.08568 4.27609 3.44341 3.91836 3.8502 3.62281C4.64713 3.0438 5.61507 2.83965 6.875 2.76067V1.66602C6.875 1.32084 7.15482 1.04102 7.5 1.04102ZM6.875 4.01372C5.73996 4.09178 5.08481 4.27089 4.58493 4.63408C4.28426 4.85253 4.01985 5.11694 3.8014 5.41761C3.43821 5.91749 3.2591 6.57264 3.18104 7.70768H16.819C16.7409 6.57264 16.5618 5.91749 16.1986 5.41761C15.9802 5.11694 15.7157 4.85253 15.4151 4.63408C14.9152 4.27089 14.26 4.09178 13.125 4.01372V4.16602C13.125 4.51119 12.8452 4.79102 12.5 4.79102C12.1548 4.79102 11.875 4.51119 11.875 4.16602V3.96667C11.3253 3.95772 10.7063 3.95768 10 3.95768C9.29369 3.95768 8.67466 3.95772 8.125 3.96667V4.16602C8.125 4.51119 7.84518 4.79102 7.5 4.79102C7.15482 4.79102 6.875 4.51119 6.875 4.16602V4.01372ZM16.866 8.95768H3.13399C3.12504 9.50734 3.125 10.1264 3.125 10.8327C3.125 12.409 3.12586 13.541 3.22083 14.4176C3.31454 15.2826 3.49383 15.8244 3.8014 16.2478C4.01985 16.5484 4.28426 16.8128 4.58493 17.0313C5.00826 17.3389 5.55011 17.5181 6.41504 17.6118C7.29166 17.7068 8.42369 17.7077 10 17.7077C10.707 17.7077 11.3265 17.7076 11.8765 17.6987C11.8802 17.3031 11.8925 17.0119 11.934 16.7498C12.2587 14.6994 13.8668 13.0914 15.9171 12.7667C16.1793 12.7252 16.4704 12.7128 16.866 12.7092C16.875 12.1592 16.875 11.5396 16.875 10.8327C16.875 10.1264 16.875 9.50734 16.866 8.95768ZM16.8188 13.96C16.4813 13.9639 16.2835 13.9742 16.1126 14.0013C14.5972 14.2413 13.4086 15.4299 13.1686 16.9453C13.1415 17.1162 13.1312 17.314 13.1273 17.6515C14.2609 17.5733 14.9155 17.3942 15.4151 17.0313C15.7157 16.8128 15.9802 16.5484 16.1986 16.2478C16.5615 15.7482 16.7407 15.0936 16.8188 13.96Z" fill="#FFB927"/>
+                            </svg>
+                            <span>24.05.2025</span>
+                        </div>
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.97312 1.52908C5.24266 1.31345 5.28636 0.920143 5.07073 0.650604C4.85509 0.381066 4.46179 0.337365 4.19225 0.552996L2.10891 2.21966C1.83938 2.43529 1.79567 2.8286 2.01131 3.09814C2.22694 3.36768 2.62024 3.41138 2.88978 3.19575L4.97312 1.52908Z" fill="#FFB927"/>
+                                <path d="M15.8064 0.552996C15.5369 0.337365 15.1436 0.381066 14.928 0.650604C14.7123 0.920143 14.756 1.31345 15.0256 1.52908L17.1089 3.19575C17.3785 3.41138 17.7718 3.36768 17.9874 3.09814C18.203 2.8286 18.1593 2.43529 17.8898 2.21966L15.8064 0.552996Z" fill="#FFB927"/>
+                                <path d="M10.6244 6.87437C10.6244 6.52919 10.3445 6.24937 9.99935 6.24937C9.65417 6.24937 9.37435 6.52919 9.37435 6.87437V10.3792C9.37435 10.6449 9.27285 10.9005 9.09061 11.0938L7.87793 12.3801C7.64114 12.6312 7.65278 13.0268 7.90394 13.2636C8.15509 13.5004 8.55065 13.4887 8.78744 13.2376L10.0001 11.9513C10.401 11.5261 10.6244 10.9637 10.6244 10.3792V6.87437Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 1.24937C5.0518 1.24937 1.04102 5.26015 1.04102 10.2077C1.04102 15.1553 5.0518 19.166 9.99935 19.166C14.9469 19.166 18.9577 15.1553 18.9577 10.2077C18.9577 5.26015 14.9469 1.24937 9.99935 1.24937ZM2.29102 10.2077C2.29102 5.95051 5.74215 2.49937 9.99935 2.49937C14.2565 2.49937 17.7077 5.95051 17.7077 10.2077C17.7077 14.4649 14.2565 17.916 9.99935 17.916C5.74215 17.916 2.29102 14.4649 2.29102 10.2077Z" fill="#FFB927"/>
+                            </svg>                                
+                            <span>09:25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest__card swiper-slide">
+                    <div class="latest__card_img"><img src="../img/jpg/news02.jpg" alt="#"></div>
+                    <div class="latest__card_title">Что изменится в налогах с июля 2025 года?</div>
+                    <div class="latest__card_text">Кратко о ключевых изменениях в законодательстве, которые коснутся всех предпринимателей. Что важно учесть заранее?</div>
+                    <div class="latest__card_info">
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.875 11.666C6.875 11.3208 7.15482 11.041 7.5 11.041H12.5C12.8452 11.041 13.125 11.3208 13.125 11.666C13.125 12.0112 12.8452 12.291 12.5 12.291H7.5C7.15482 12.291 6.875 12.0112 6.875 11.666Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1.04102C7.84518 1.04102 8.125 1.32084 8.125 1.66602V2.71652C8.6827 2.70768 9.30236 2.70768 9.99079 2.70768H10.0092C10.6976 2.70768 11.3173 2.70768 11.875 2.71652V1.66602C11.875 1.32084 12.1548 1.04102 12.5 1.04102C12.8452 1.04102 13.125 1.32084 13.125 1.66602V2.76067C14.3849 2.83965 15.3529 3.0438 16.1498 3.62281C16.5566 3.91836 16.9143 4.27609 17.2099 4.68288C17.8781 5.6026 18.047 6.75008 18.1005 8.31128C18.125 9.02563 18.125 9.85678 18.125 10.8235V10.8419C18.125 11.8086 18.125 12.6397 18.1005 13.3541C18.047 14.9153 17.8781 16.0628 17.2099 16.9825C16.9143 17.3893 16.5566 17.747 16.1498 18.0426C15.2301 18.7108 14.0826 18.8797 12.5214 18.9332C11.807 18.9577 10.9758 18.9577 10.009 18.9577H9.96227C8.43184 18.9577 7.23217 18.9577 6.2804 18.8546C5.30912 18.7493 4.52213 18.5307 3.8502 18.0426C3.44341 17.747 3.08568 17.3893 2.79013 16.9825C2.30194 16.3106 2.08334 15.5236 1.97811 14.5523C1.87499 13.6005 1.87499 12.4008 1.875 10.8704L1.875 10.8235C1.875 9.85675 1.875 9.02562 1.89947 8.31128C1.95296 6.75008 2.12191 5.60259 2.79013 4.68288C3.08568 4.27609 3.44341 3.91836 3.8502 3.62281C4.64713 3.0438 5.61507 2.83965 6.875 2.76067V1.66602C6.875 1.32084 7.15482 1.04102 7.5 1.04102ZM6.875 4.01372C5.73996 4.09178 5.08481 4.27089 4.58493 4.63408C4.28426 4.85253 4.01985 5.11694 3.8014 5.41761C3.43821 5.91749 3.2591 6.57264 3.18104 7.70768H16.819C16.7409 6.57264 16.5618 5.91749 16.1986 5.41761C15.9802 5.11694 15.7157 4.85253 15.4151 4.63408C14.9152 4.27089 14.26 4.09178 13.125 4.01372V4.16602C13.125 4.51119 12.8452 4.79102 12.5 4.79102C12.1548 4.79102 11.875 4.51119 11.875 4.16602V3.96667C11.3253 3.95772 10.7063 3.95768 10 3.95768C9.29369 3.95768 8.67466 3.95772 8.125 3.96667V4.16602C8.125 4.51119 7.84518 4.79102 7.5 4.79102C7.15482 4.79102 6.875 4.51119 6.875 4.16602V4.01372ZM16.866 8.95768H3.13399C3.12504 9.50734 3.125 10.1264 3.125 10.8327C3.125 12.409 3.12586 13.541 3.22083 14.4176C3.31454 15.2826 3.49383 15.8244 3.8014 16.2478C4.01985 16.5484 4.28426 16.8128 4.58493 17.0313C5.00826 17.3389 5.55011 17.5181 6.41504 17.6118C7.29166 17.7068 8.42369 17.7077 10 17.7077C10.707 17.7077 11.3265 17.7076 11.8765 17.6987C11.8802 17.3031 11.8925 17.0119 11.934 16.7498C12.2587 14.6994 13.8668 13.0914 15.9171 12.7667C16.1793 12.7252 16.4704 12.7128 16.866 12.7092C16.875 12.1592 16.875 11.5396 16.875 10.8327C16.875 10.1264 16.875 9.50734 16.866 8.95768ZM16.8188 13.96C16.4813 13.9639 16.2835 13.9742 16.1126 14.0013C14.5972 14.2413 13.4086 15.4299 13.1686 16.9453C13.1415 17.1162 13.1312 17.314 13.1273 17.6515C14.2609 17.5733 14.9155 17.3942 15.4151 17.0313C15.7157 16.8128 15.9802 16.5484 16.1986 16.2478C16.5615 15.7482 16.7407 15.0936 16.8188 13.96Z" fill="#FFB927"/>
+                            </svg>
+                            <span>24.05.2025</span>
+                        </div>
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.97312 1.52908C5.24266 1.31345 5.28636 0.920143 5.07073 0.650604C4.85509 0.381066 4.46179 0.337365 4.19225 0.552996L2.10891 2.21966C1.83938 2.43529 1.79567 2.8286 2.01131 3.09814C2.22694 3.36768 2.62024 3.41138 2.88978 3.19575L4.97312 1.52908Z" fill="#FFB927"/>
+                                <path d="M15.8064 0.552996C15.5369 0.337365 15.1436 0.381066 14.928 0.650604C14.7123 0.920143 14.756 1.31345 15.0256 1.52908L17.1089 3.19575C17.3785 3.41138 17.7718 3.36768 17.9874 3.09814C18.203 2.8286 18.1593 2.43529 17.8898 2.21966L15.8064 0.552996Z" fill="#FFB927"/>
+                                <path d="M10.6244 6.87437C10.6244 6.52919 10.3445 6.24937 9.99935 6.24937C9.65417 6.24937 9.37435 6.52919 9.37435 6.87437V10.3792C9.37435 10.6449 9.27285 10.9005 9.09061 11.0938L7.87793 12.3801C7.64114 12.6312 7.65278 13.0268 7.90394 13.2636C8.15509 13.5004 8.55065 13.4887 8.78744 13.2376L10.0001 11.9513C10.401 11.5261 10.6244 10.9637 10.6244 10.3792V6.87437Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 1.24937C5.0518 1.24937 1.04102 5.26015 1.04102 10.2077C1.04102 15.1553 5.0518 19.166 9.99935 19.166C14.9469 19.166 18.9577 15.1553 18.9577 10.2077C18.9577 5.26015 14.9469 1.24937 9.99935 1.24937ZM2.29102 10.2077C2.29102 5.95051 5.74215 2.49937 9.99935 2.49937C14.2565 2.49937 17.7077 5.95051 17.7077 10.2077C17.7077 14.4649 14.2565 17.916 9.99935 17.916C5.74215 17.916 2.29102 14.4649 2.29102 10.2077Z" fill="#FFB927"/>
+                            </svg>                                
+                            <span>09:25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest__card swiper-slide">
+                    <div class="latest__card_img"><img src="../img/jpg/news01.jpg" alt="#"></div>
+                    <div class="latest__card_title">Что изменится в налогах с июля 2025 года?</div>
+                    <div class="latest__card_text">Кратко о ключевых изменениях в законодательстве, которые коснутся всех предпринимателей. Что важно учесть заранее?</div>
+                    <div class="latest__card_info">
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.875 11.666C6.875 11.3208 7.15482 11.041 7.5 11.041H12.5C12.8452 11.041 13.125 11.3208 13.125 11.666C13.125 12.0112 12.8452 12.291 12.5 12.291H7.5C7.15482 12.291 6.875 12.0112 6.875 11.666Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1.04102C7.84518 1.04102 8.125 1.32084 8.125 1.66602V2.71652C8.6827 2.70768 9.30236 2.70768 9.99079 2.70768H10.0092C10.6976 2.70768 11.3173 2.70768 11.875 2.71652V1.66602C11.875 1.32084 12.1548 1.04102 12.5 1.04102C12.8452 1.04102 13.125 1.32084 13.125 1.66602V2.76067C14.3849 2.83965 15.3529 3.0438 16.1498 3.62281C16.5566 3.91836 16.9143 4.27609 17.2099 4.68288C17.8781 5.6026 18.047 6.75008 18.1005 8.31128C18.125 9.02563 18.125 9.85678 18.125 10.8235V10.8419C18.125 11.8086 18.125 12.6397 18.1005 13.3541C18.047 14.9153 17.8781 16.0628 17.2099 16.9825C16.9143 17.3893 16.5566 17.747 16.1498 18.0426C15.2301 18.7108 14.0826 18.8797 12.5214 18.9332C11.807 18.9577 10.9758 18.9577 10.009 18.9577H9.96227C8.43184 18.9577 7.23217 18.9577 6.2804 18.8546C5.30912 18.7493 4.52213 18.5307 3.8502 18.0426C3.44341 17.747 3.08568 17.3893 2.79013 16.9825C2.30194 16.3106 2.08334 15.5236 1.97811 14.5523C1.87499 13.6005 1.87499 12.4008 1.875 10.8704L1.875 10.8235C1.875 9.85675 1.875 9.02562 1.89947 8.31128C1.95296 6.75008 2.12191 5.60259 2.79013 4.68288C3.08568 4.27609 3.44341 3.91836 3.8502 3.62281C4.64713 3.0438 5.61507 2.83965 6.875 2.76067V1.66602C6.875 1.32084 7.15482 1.04102 7.5 1.04102ZM6.875 4.01372C5.73996 4.09178 5.08481 4.27089 4.58493 4.63408C4.28426 4.85253 4.01985 5.11694 3.8014 5.41761C3.43821 5.91749 3.2591 6.57264 3.18104 7.70768H16.819C16.7409 6.57264 16.5618 5.91749 16.1986 5.41761C15.9802 5.11694 15.7157 4.85253 15.4151 4.63408C14.9152 4.27089 14.26 4.09178 13.125 4.01372V4.16602C13.125 4.51119 12.8452 4.79102 12.5 4.79102C12.1548 4.79102 11.875 4.51119 11.875 4.16602V3.96667C11.3253 3.95772 10.7063 3.95768 10 3.95768C9.29369 3.95768 8.67466 3.95772 8.125 3.96667V4.16602C8.125 4.51119 7.84518 4.79102 7.5 4.79102C7.15482 4.79102 6.875 4.51119 6.875 4.16602V4.01372ZM16.866 8.95768H3.13399C3.12504 9.50734 3.125 10.1264 3.125 10.8327C3.125 12.409 3.12586 13.541 3.22083 14.4176C3.31454 15.2826 3.49383 15.8244 3.8014 16.2478C4.01985 16.5484 4.28426 16.8128 4.58493 17.0313C5.00826 17.3389 5.55011 17.5181 6.41504 17.6118C7.29166 17.7068 8.42369 17.7077 10 17.7077C10.707 17.7077 11.3265 17.7076 11.8765 17.6987C11.8802 17.3031 11.8925 17.0119 11.934 16.7498C12.2587 14.6994 13.8668 13.0914 15.9171 12.7667C16.1793 12.7252 16.4704 12.7128 16.866 12.7092C16.875 12.1592 16.875 11.5396 16.875 10.8327C16.875 10.1264 16.875 9.50734 16.866 8.95768ZM16.8188 13.96C16.4813 13.9639 16.2835 13.9742 16.1126 14.0013C14.5972 14.2413 13.4086 15.4299 13.1686 16.9453C13.1415 17.1162 13.1312 17.314 13.1273 17.6515C14.2609 17.5733 14.9155 17.3942 15.4151 17.0313C15.7157 16.8128 15.9802 16.5484 16.1986 16.2478C16.5615 15.7482 16.7407 15.0936 16.8188 13.96Z" fill="#FFB927"/>
+                            </svg>
+                            <span>24.05.2025</span>
+                        </div>
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.97312 1.52908C5.24266 1.31345 5.28636 0.920143 5.07073 0.650604C4.85509 0.381066 4.46179 0.337365 4.19225 0.552996L2.10891 2.21966C1.83938 2.43529 1.79567 2.8286 2.01131 3.09814C2.22694 3.36768 2.62024 3.41138 2.88978 3.19575L4.97312 1.52908Z" fill="#FFB927"/>
+                                <path d="M15.8064 0.552996C15.5369 0.337365 15.1436 0.381066 14.928 0.650604C14.7123 0.920143 14.756 1.31345 15.0256 1.52908L17.1089 3.19575C17.3785 3.41138 17.7718 3.36768 17.9874 3.09814C18.203 2.8286 18.1593 2.43529 17.8898 2.21966L15.8064 0.552996Z" fill="#FFB927"/>
+                                <path d="M10.6244 6.87437C10.6244 6.52919 10.3445 6.24937 9.99935 6.24937C9.65417 6.24937 9.37435 6.52919 9.37435 6.87437V10.3792C9.37435 10.6449 9.27285 10.9005 9.09061 11.0938L7.87793 12.3801C7.64114 12.6312 7.65278 13.0268 7.90394 13.2636C8.15509 13.5004 8.55065 13.4887 8.78744 13.2376L10.0001 11.9513C10.401 11.5261 10.6244 10.9637 10.6244 10.3792V6.87437Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 1.24937C5.0518 1.24937 1.04102 5.26015 1.04102 10.2077C1.04102 15.1553 5.0518 19.166 9.99935 19.166C14.9469 19.166 18.9577 15.1553 18.9577 10.2077C18.9577 5.26015 14.9469 1.24937 9.99935 1.24937ZM2.29102 10.2077C2.29102 5.95051 5.74215 2.49937 9.99935 2.49937C14.2565 2.49937 17.7077 5.95051 17.7077 10.2077C17.7077 14.4649 14.2565 17.916 9.99935 17.916C5.74215 17.916 2.29102 14.4649 2.29102 10.2077Z" fill="#FFB927"/>
+                            </svg>
+                            <span>09:25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest__card swiper-slide">
+                    <div class="latest__card_img"><img src="../img/jpg/news01.jpg" alt="#"></div>
+                    <div class="latest__card_title">Что изменится в налогах с июля 2025 года?</div>
+                    <div class="latest__card_text">Кратко о ключевых изменениях в законодательстве, которые коснутся всех предпринимателей. Что важно учесть заранее?</div>
+                    <div class="latest__card_info">
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.875 11.666C6.875 11.3208 7.15482 11.041 7.5 11.041H12.5C12.8452 11.041 13.125 11.3208 13.125 11.666C13.125 12.0112 12.8452 12.291 12.5 12.291H7.5C7.15482 12.291 6.875 12.0112 6.875 11.666Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1.04102C7.84518 1.04102 8.125 1.32084 8.125 1.66602V2.71652C8.6827 2.70768 9.30236 2.70768 9.99079 2.70768H10.0092C10.6976 2.70768 11.3173 2.70768 11.875 2.71652V1.66602C11.875 1.32084 12.1548 1.04102 12.5 1.04102C12.8452 1.04102 13.125 1.32084 13.125 1.66602V2.76067C14.3849 2.83965 15.3529 3.0438 16.1498 3.62281C16.5566 3.91836 16.9143 4.27609 17.2099 4.68288C17.8781 5.6026 18.047 6.75008 18.1005 8.31128C18.125 9.02563 18.125 9.85678 18.125 10.8235V10.8419C18.125 11.8086 18.125 12.6397 18.1005 13.3541C18.047 14.9153 17.8781 16.0628 17.2099 16.9825C16.9143 17.3893 16.5566 17.747 16.1498 18.0426C15.2301 18.7108 14.0826 18.8797 12.5214 18.9332C11.807 18.9577 10.9758 18.9577 10.009 18.9577H9.96227C8.43184 18.9577 7.23217 18.9577 6.2804 18.8546C5.30912 18.7493 4.52213 18.5307 3.8502 18.0426C3.44341 17.747 3.08568 17.3893 2.79013 16.9825C2.30194 16.3106 2.08334 15.5236 1.97811 14.5523C1.87499 13.6005 1.87499 12.4008 1.875 10.8704L1.875 10.8235C1.875 9.85675 1.875 9.02562 1.89947 8.31128C1.95296 6.75008 2.12191 5.60259 2.79013 4.68288C3.08568 4.27609 3.44341 3.91836 3.8502 3.62281C4.64713 3.0438 5.61507 2.83965 6.875 2.76067V1.66602C6.875 1.32084 7.15482 1.04102 7.5 1.04102ZM6.875 4.01372C5.73996 4.09178 5.08481 4.27089 4.58493 4.63408C4.28426 4.85253 4.01985 5.11694 3.8014 5.41761C3.43821 5.91749 3.2591 6.57264 3.18104 7.70768H16.819C16.7409 6.57264 16.5618 5.91749 16.1986 5.41761C15.9802 5.11694 15.7157 4.85253 15.4151 4.63408C14.9152 4.27089 14.26 4.09178 13.125 4.01372V4.16602C13.125 4.51119 12.8452 4.79102 12.5 4.79102C12.1548 4.79102 11.875 4.51119 11.875 4.16602V3.96667C11.3253 3.95772 10.7063 3.95768 10 3.95768C9.29369 3.95768 8.67466 3.95772 8.125 3.96667V4.16602C8.125 4.51119 7.84518 4.79102 7.5 4.79102C7.15482 4.79102 6.875 4.51119 6.875 4.16602V4.01372ZM16.866 8.95768H3.13399C3.12504 9.50734 3.125 10.1264 3.125 10.8327C3.125 12.409 3.12586 13.541 3.22083 14.4176C3.31454 15.2826 3.49383 15.8244 3.8014 16.2478C4.01985 16.5484 4.28426 16.8128 4.58493 17.0313C5.00826 17.3389 5.55011 17.5181 6.41504 17.6118C7.29166 17.7068 8.42369 17.7077 10 17.7077C10.707 17.7077 11.3265 17.7076 11.8765 17.6987C11.8802 17.3031 11.8925 17.0119 11.934 16.7498C12.2587 14.6994 13.8668 13.0914 15.9171 12.7667C16.1793 12.7252 16.4704 12.7128 16.866 12.7092C16.875 12.1592 16.875 11.5396 16.875 10.8327C16.875 10.1264 16.875 9.50734 16.866 8.95768ZM16.8188 13.96C16.4813 13.9639 16.2835 13.9742 16.1126 14.0013C14.5972 14.2413 13.4086 15.4299 13.1686 16.9453C13.1415 17.1162 13.1312 17.314 13.1273 17.6515C14.2609 17.5733 14.9155 17.3942 15.4151 17.0313C15.7157 16.8128 15.9802 16.5484 16.1986 16.2478C16.5615 15.7482 16.7407 15.0936 16.8188 13.96Z" fill="#FFB927"/>
+                            </svg>                                
+                            <span>24.05.2025</span>
+                        </div>
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.97312 1.52908C5.24266 1.31345 5.28636 0.920143 5.07073 0.650604C4.85509 0.381066 4.46179 0.337365 4.19225 0.552996L2.10891 2.21966C1.83938 2.43529 1.79567 2.8286 2.01131 3.09814C2.22694 3.36768 2.62024 3.41138 2.88978 3.19575L4.97312 1.52908Z" fill="#FFB927"/>
+                                <path d="M15.8064 0.552996C15.5369 0.337365 15.1436 0.381066 14.928 0.650604C14.7123 0.920143 14.756 1.31345 15.0256 1.52908L17.1089 3.19575C17.3785 3.41138 17.7718 3.36768 17.9874 3.09814C18.203 2.8286 18.1593 2.43529 17.8898 2.21966L15.8064 0.552996Z" fill="#FFB927"/>
+                                <path d="M10.6244 6.87437C10.6244 6.52919 10.3445 6.24937 9.99935 6.24937C9.65417 6.24937 9.37435 6.52919 9.37435 6.87437V10.3792C9.37435 10.6449 9.27285 10.9005 9.09061 11.0938L7.87793 12.3801C7.64114 12.6312 7.65278 13.0268 7.90394 13.2636C8.15509 13.5004 8.55065 13.4887 8.78744 13.2376L10.0001 11.9513C10.401 11.5261 10.6244 10.9637 10.6244 10.3792V6.87437Z" fill="#FFB927"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99935 1.24937C5.0518 1.24937 1.04102 5.26015 1.04102 10.2077C1.04102 15.1553 5.0518 19.166 9.99935 19.166C14.9469 19.166 18.9577 15.1553 18.9577 10.2077C18.9577 5.26015 14.9469 1.24937 9.99935 1.24937ZM2.29102 10.2077C2.29102 5.95051 5.74215 2.49937 9.99935 2.49937C14.2565 2.49937 17.7077 5.95051 17.7077 10.2077C17.7077 14.4649 14.2565 17.916 9.99935 17.916C5.74215 17.916 2.29102 14.4649 2.29102 10.2077Z" fill="#FFB927"/>
+                            </svg>                                
+                            <span>09:25</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+
+        <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__box">
+            <div class="footer__columns">
+                <div class="footer__columns_content">
+                    <div class="footer__columns_content-1">
+                        <ul class="footer__columns_list">
+                            <li><a class="footer__columns_list-title" href="##">
+                                <img src="../img/svg/socials.svg" alt="#">
+                                <span>Соц. сети</span>
+                            </a></li>
+                            <li><a href="https://t.me/husaynaliyev">
+                                <img src="../img/svg/telegram.svg" alt="#">
+                                <span>Telegram</span>
+                            </a></li>
+                            <li><a href="https://www.instagram.com/numera_services?igsh=cGhybTM5aHJoZzJw">
+                                <img src="../img/svg/instagram.svg" alt="#">
+                                <span>Instagram</span>
+                            </a></li>
+                            <li><a href="https://www.facebook.com/share/192FkBJTiL/">
+                                <img src="../img/svg/facebook.svg" alt="#">
+                                <span>Facebook</span>
+                            </a></li>
+                        </ul>
+                        <ul class="footer__columns_list">
+                            <li><a class="footer__columns_list-title" href="##">
+                                <img src="../img/svg/footer-call.svg" alt="#">
+                                <span>Телефоны</span>
+                            </a></li>
+                            <li><a href="tel:+998712946062">
+                                <span>+998 71 294 60 62</span>
+                            </a></li>
+                            <li><a href="tel:+998909332420">
+                                <span>+998 90 933 24 20</span>
+                            </a></li>
+                        </ul>
+                        <div class="footer__columns_rights desktop-only">© 2022–2025 «Numera.uz»</div>
+                    </div>
+                    <div class="footer__columns_content-2">
+                        <ul class="footer__column_list">
+                            <li><a class="footer__columns_list-title" href="##">
+                                <img src="../img/svg/clock.svg" alt="#">
+                                <span>График работы:</span>
+                            </a></li>
+                            <li><a href="##">
+                                <span>Пн–Пт: 9:00 – 18:00</span>
+                            </a></li>
+                        </ul>
+                        <ul class="footer__column_list">
+                            <li><a class="footer__columns_list-title" href="##">
+                                <img src="../img/svg/email.svg" alt="#">
+                                <span>Email</span>
+                            </a></li>
+                            <li><a href="##">
+                                <span>info@numera.uz</span>
+                            </a></li>
+                            <li><a href="##">
+                                <span>khusankhonaliev@gmail.com</span>
+                            </a></li>
+                        </ul>
+                        <ul class="footer__column_list">
+                            <li><a class="footer__columns_list-title" href="##">
+                                <img src="../img/svg/footer-location.svg" alt="#">
+                                <span>Адрес офиса</span>
+                            </a></li>
+                            <li><a class="footer__column_list-adress" href="##">
+                                <span>г. Ташкент, Яшнабадский район, ул. Карасув, 33А</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__columns_rights mobile-only">© 2022–2025 «Numera.uz»</div>
+                </div>
+                <div class="footer__columns_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5995.009854645912!2d69.341487!3d41.297878000000004!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE3JzUyLjQiTiA2OcKwMjAnMjkuNCJF!5e0!3m2!1sru!2s!4v1750238504433!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

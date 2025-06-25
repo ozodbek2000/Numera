@@ -11,6 +11,7 @@
 
 	// Базовая высота шрифта
 	--bs-line-height: 1;
+	--text-line-height: 40px;
 	--subtitle-line-height: 30px;
 	--mobile-subtitle-line-height: 20px;
 	--text-line-height: 30px;
@@ -21,22 +22,23 @@
 
 
 	// Размеры шрифтов
+	--title-big-size: 64px;
+	--about-title: 62px;
 	--title-size: 48px;
 	--form-size: 40px;
+	--cardNumSize: 36px;
 	--card-subtitle: 32px;
+	--cardTitleSize: 28px;
 	--mobileTitle-size: 24px;
+	--about-title-mobile: 24px;
+	--cardTitleMobileSize: 24px;
 	--subtitleSize: 18px;
+	--textSize: 18px;
+	--textMedSize: 16px;
 	--mobileSubtitleSize: 14px;
 	--numeraSize: 14px;
-	--textSize: 18px;
 	--textMobileSize: 14px;
-	--cardTitleSize: 28px;
-	--cardTitleMobileSize: 24px;
-	--textMedSize: 16px;
 	--textMedMobileSize: 14px;
-	--cardNumSize: 36px;
-	--about-title: 62px;
-	--about-title-mobile: 24px;
 
 
 	// Цвет шрифта по умолчанию
@@ -44,6 +46,7 @@
 	--navy: #07202F;
 	--blue: #0072FF;
 	--lightblue: #3A97ED;
+	--grayblue: #2A5E97;
 	--yellow: #FFC357;
 	--bright-yellow: #FFB927;
 	--bg-black: #040B0F;
@@ -59,13 +62,16 @@
 	--white-gray: #AAACAA;
 	--white-grayish: #fff;
 	--white-blue-05: #fff;
+	--white-black: #fff;
 	--yellow-blue: #FFC357;
 	--yellow-03-navy: #4F4225;
 	--yellow-navy: #FFC357;
 	--yellow-white: #FFC357;
 	--yellow-aaa: #FFC357;
+	--grayblue--blue: #2A5E97;
 	--navy-white: #07202F;
 	--navy-blue-05: #07202F;
+	--navy-blue-10: #07202F;
 	--navy-blue: #07202F;
 	--black-white: #040B0F;
 	--gray-70-navy: rgba(255, 255, 255, 0.7);
@@ -90,13 +96,16 @@
 	--white-gray: #AAAAAA;
 	--white-grayish: #555;
 	--white-blue-05: #81A3B7;
+	--white-black: #000;
 	--yellow-blue: #0072FF;
 	--yellow-03-navy: #07202F;
 	--yellow-navy: #07202F;
 	--yellow-white: #fff;
 	--yellow-aaa: #AAAAAA;
+	--grayblue--blue: #0072FF;
 	--navy-white: #fff;
 	--navy-blue-05: #F2F8FF;
+	--navy-blue-10: #E6F1FF;
 	--navy-blue: #0072FF;
 	--black-white: #fff;
 	--gray-70-navy: #07202F;

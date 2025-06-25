@@ -27,12 +27,14 @@ $(document).ready(function () {
     $(".faq-item").click(function (event) {
         $(this).toggleClass("active");
     });
+    
     //READ MORE
     $(".story__slide_text > span").on("click", function() {
         $(this).siblings('p').css('-webkit-line-clamp', 'unset');
         $(this).hide();
     });
     //READ MORE
+    
     dropdown();
     dropdownSimple();
     if ($(window).width() < 1080) {
@@ -57,9 +59,58 @@ $(document).ready(function () {
                 },
             },
         });
+
     }
 
     //COPYING FORM INPUTS
+
+    new Swiper(".advan__grid_swiper", {
+        slidesPerView: 2,
+        breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,  
+                },
+                1080: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,  
+                },
+            },
+    });
+
+    new Swiper(".consult__cards_container", {
+        breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,  
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,  
+                },
+                1080: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,  
+                },
+            },
+    });
+
+    new Swiper(".latest__swiper", {
+        breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,  
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,  
+                },
+                1080: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,  
+                },
+            },
+    });
 
     $(".calc__inputs_clear a:last-child").on("click", function (e) {
         e.preventDefault();

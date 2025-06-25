@@ -14,6 +14,15 @@
         font-weight: 600;
     }
 }
+.title-big {
+    font-size: var(--title-big-size);
+    line-height: 1.1;
+    font-weight: 500;
+    @media (max-width: 1080px) {
+        font-size: var(--mobileTitle-size);
+        line-height: 1.2;
+    }
+}
 .numera {
     color: var(--yellow);
     font-size: var(--numeraSize);
@@ -68,7 +77,6 @@
     display: none;
 }
 .desktop-only {
-
 }
 .yellow-button {
     background-color: var(--bright-yellow);
@@ -83,6 +91,28 @@
     font-weight: 500;
     cursor: pointer;
     user-select: none;
+}
+.yellow-button-big {
+    font-size: var(--cardNumSize);
+    background-color: var(--bright-yellow);
+    height: 120px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--navy);
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    max-width: 710px;
+    width: 100%;
+    @media (max-width: 1080px) {
+        font-size: var(--textMobileSize);
+        height: 50px;
+        border-radius: 20px;
+        max-width: 231px;
+        width: 100%;
+    }
 }
 .button-transparent {
     font-size: var(--textSize);
