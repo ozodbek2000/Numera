@@ -1,0 +1,207 @@
+.three {
+
+    margin-bottom: 130px;
+    background-color: var(--blue);
+    padding: 40px 0px;
+    font-family: var(--montserrat);
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__content {
+
+        flex: 0 1 44%;
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: -65%;
+            left: -26%;
+        }
+
+        &_title {
+            font-family: var(--montserrat);
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+
+    &__form {
+        flex: 0 1 56%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+            height: 50px;
+            padding: 20px 18px;
+            border-radius: var(--radius);
+            width: 100%;
+        }
+        .dropdown-simple {
+            > a {
+                height: 50px;
+                padding: 0px 20px;
+                align-items: center;
+                color: var(--navy);
+                font-size: 14px;
+                font-weight: 400;
+                color: #849097;
+                img {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+            > ul {
+                top: 50px;
+            }
+        }
+    }
+
+    &__steps {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+
+        &_step {
+            span {
+                font-family: var(--montserrat);
+                font-weight: 500;
+                color: #fff;
+            }
+            p {
+                line-height: var(--text-mobile-line-height);
+            }
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__submit {
+        background-color: var(--bright-yellow);
+        max-width: 336px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        border-radius: var(--radius);
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    @media (max-width: 1080px) {
+        margin-bottom: 70px;
+        background-color: var(--blue);
+        padding: 18px 0px;
+        font-family: var(--montserrat);
+        overflow: hidden;
+    
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    
+        &__content {
+    
+            flex: 0 1 44%;
+            position: relative;
+    
+            img {
+                position: absolute;
+                bottom: -65%;
+                left: -26%;
+                visibility: hidden;
+                opacity: 0;
+            }
+    
+            &_title {
+                font-family: var(--montserrat);
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    
+        &__form {
+            flex: 0 1 56%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            input {
+                height: 50px;
+                padding: 20px 18px;
+                border-radius: var(--radius);
+                width: 100%;
+            }
+            .dropdown-simple {
+                > a {
+                    height: 50px;
+                    padding: 0px 20px;
+                    align-items: center;
+                    color: var(--navy);
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #849097;
+                    img {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+                > ul {
+                    top: 50px;
+                }
+            }
+        }
+    
+        &__steps {
+    
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 220px));
+            gap: 50px;
+            overflow: auto;
+    
+            &_step {
+                span {
+                    font-family: var(--montserrat);
+                    font-weight: 500;
+                    color: #fff;
+                }
+                p {
+                    line-height: var(--text-mobile-line-height);
+                    font-size: 14px;
+                }
+            }
+        }
+    
+        &__inputs {
+            display: flex;
+            align-items: inherit;
+            flex-direction: column;
+            gap: 30px;
+        }
+    
+        &__submit {
+            background-color: var(--bright-yellow);
+            max-width: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            border-radius: var(--radius);
+            align-items: center;
+            height: 50px;
+            justify-content: center;
+            margin-left: auto;
+            margin-bottom: 12px;
+        }
+    }
+}

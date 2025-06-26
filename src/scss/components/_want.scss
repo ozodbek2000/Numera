@@ -1,0 +1,45 @@
+.want {
+
+    text-align: center;
+    margin: 130px 0px 70px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__title {
+        color: var(--white-blue);
+    }
+
+    &__text {
+    }
+
+    &__button {
+        margin: 0px auto;
+    }
+    @media (max-width: 1080px) {
+        text-align: center;
+        margin: 0px 0px 70px;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__title {
+            color: var(--white-blue);
+            margin-bottom: -20px;
+        }
+
+        &__text {
+        }
+
+        &__button {
+            margin: 0px auto;
+            max-width: inherit;
+        }
+    }
+}

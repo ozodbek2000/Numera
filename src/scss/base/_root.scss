@@ -13,12 +13,12 @@
 	--bs-line-height: 1;
 	--text-line-height: 40px;
 	--subtitle-line-height: 30px;
-	--mobile-subtitle-line-height: 20px;
 	--text-line-height: 30px;
-	--text-mobile-line-height: 20px;
 	--card-title-line-height: 30px;
 	--min-title-line-height: 30px;
+	--mobile-subtitle-line-height: 20px;
 	--min-title-mobile-line-height: 25px;
+	--text-mobile-line-height: 20px;
 
 
 	// Размеры шрифтов
@@ -74,11 +74,13 @@
 	--navy-blue-10: #07202F;
 	--navy-blue: #07202F;
 	--black-white: #040B0F;
+	--gray-60-white: rgba(255, 255, 255, 0.6);
 	--gray-70-navy: rgba(255, 255, 255, 0.7);
 	--gray-70-blue-50: rgba(255, 255, 255, 0.7);
 	--gray-70-555: rgba(255, 255, 255, 0.7);
 	--transparent-blue-05: transparent;
 	--transparent-blue: transparent;
+	--swiper-bg: linear-gradient(90deg, #040B0F 0%, rgba(4, 11, 15, 0.2) 25%, rgba(4, 11, 15, 0) 50%, rgba(4, 11, 15, 0.2) 75%, #040B0F 100%);
 	
 
 	--transition: 0.3s ease all;
@@ -108,10 +110,13 @@
 	--navy-blue-10: #E6F1FF;
 	--navy-blue: #0072FF;
 	--black-white: #fff;
+	--gray-60-white: #99C7FF;
 	--gray-70-navy: #07202F;
 	--gray-70-blue-50: rgba(0, 114, 255, 0.5);
 	--gray-70-555: #555555;
 	--transparent-blue-05: #F2F8FF;
 	--transparent-blue: #0072FF;
+	--swiper-bg: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 75%, #FFFFFF 100%);
+
 
 }

@@ -1,0 +1,37 @@
+<section class="three">
+    <div class="three__container">
+        <div class="three__content">
+            <div class="three__content_title title">3 шага до решения проблем с учётом</div>
+            <img src="../img/png/three01.png" alt="#">
+        </div>
+        <div class="three__form">
+            <div class="three__steps">
+                <div class="three__steps_step">
+                    <span class="title">01</span>
+                    <p>Обсудим вашу ситуацию с бухгалтерией</p>
+                </div>
+                <div class="three__steps_step">
+                    <span class="title">02</span>
+                    <p>Подберем решение под ваш бизнес</p>
+                </div>
+                <div class="three__steps_step">
+                    <span class="title">03</span>
+                    <p>Начнём работу уже сегодня</p>
+                </div>
+            </div>
+            <div class="three__inputs">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+            </div>
+            <input type="tel" placeholder="Номер телефона">
+            @@include('../components/dropdown-simple.html', {
+                "items": "<li><a href='##'>ИП</a></li><li><a href='##'>ООО</a></li><li><a href='##'>АО</a></li><li><a href='##'>НКО</a></li>"
+            })
+            <input type="email" placeholder="Email-адрес (Необязательно)">
+            <a class="three__submit" href="##">
+                Отправить
+                <img src="../img/svg/form.svg" alt="#">
+            </a>
+        </div>
+    </div>
+</section>

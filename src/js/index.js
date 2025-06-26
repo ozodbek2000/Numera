@@ -112,6 +112,41 @@ $(document).ready(function () {
             },
     });
 
+    new Swiper(".partners__swiper", {
+        breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,  
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,  
+                },
+                1080: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,  
+                },
+            },
+    });
+
+    new Swiper(".trust__swiper", {
+        slidesPerView: 5,
+        breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,  
+                },
+                767: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,  
+                },
+                1080: {
+                    slidesPerView: 5,
+                    spaceBetween: 110,  
+                },
+            },
+    });
+
     $(".calc__inputs_clear a:last-child").on("click", function (e) {
         e.preventDefault();
 
