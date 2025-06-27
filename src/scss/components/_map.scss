@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     height: 640px;
+    position: relative;
 
     &__container {
         max-width: 765px !important;
@@ -23,6 +24,32 @@
     &__text {
         color: var(--white-grayish);
     }
+
+    > img {
+        position: absolute;
+    }
+
+    &__bg01 {
+        top: 10%;
+        left: 20%;
+    }
+    &__bg02 {
+        bottom: 0;
+        left: 30%;
+    }
+    &__bg03 {
+        top: -4%;
+        left: 43%;
+    }
+    &__bg04 {
+        right: 30%;
+        top: 10%;
+    }
+    &__bg05 {
+        bottom: 20%;
+        right: 24%;
+    }
+
     @media (max-width: 1080px) {
         background-size: cover;
         &__container {
@@ -39,6 +66,32 @@
 
         &__text {
             color: var(--bg-white);
+        }
+
+        &__bg01 {
+            top: 10%;
+            left: 0%;
+            max-width: 80px;
+        }
+        &__bg02 {
+            bottom: 15%;
+            left: 10%;
+            max-width: 150px;
+        }
+        &__bg03 {
+            top: 12%;
+            left: 43%;
+            max-width: 70px;
+        }
+        &__bg04 {
+            right: 0%;
+            top: 30%;
+            max-width: 100px;            
+        }
+        &__bg05 {
+            bottom: 20%;
+            right: 4%;
+            max-width: 100px;
         }
     }
 }

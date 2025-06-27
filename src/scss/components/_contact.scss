@@ -1,0 +1,110 @@
+.contact {
+
+    background-color: var(--navy-blue);
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+        padding: 204px 15px 202px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: var(--raleway);
+        color: #fff;
+    }
+
+    &__text {
+        max-width: 636px;
+        line-height: var(--min-title-mobile-line-height);
+        margin: 10px 0px 42px 0px;
+        font-size: var(--textMedSize);
+        color: #fff;
+        opacity: 0.6;
+    }
+
+    &__button {
+        max-width: 196px;
+        color: var(--navy);
+        height: 50px;
+    }
+
+    &__bg01 {
+        position: absolute;
+        top: calc(50% - 282px);
+        right: 0;
+    }
+
+    &__bg02 {
+        position: absolute;
+        top: -50%;
+        left: -15%;
+    }
+
+    &__bg03 {
+        position: absolute;
+        bottom: -10%;
+        left: -15%;
+    }
+
+    @media (max-width: 1080px) {
+        background-color: transparent;
+        overflow: hidden;
+    
+        &__container {
+            position: relative;
+            padding: 74px 15px 171px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &__title {
+            font-family: var(--white-blue);
+        }
+    
+        &__text {
+            max-width: 636px;
+            line-height: var(--min-title-mobile-line-height);
+            margin: 10px 0px 42px 0px;
+            font-size: var(--textMedSize);
+            color: var(--gray-70-555);
+            text-align: center;
+        }
+    
+        &__button {
+            max-width: 196px;
+            color: var(--navy);
+            height: 50px;
+            width: 100%;
+        }
+    
+        &__bg01 {
+            position: absolute;
+            top: inherit;
+            bottom: -6%;
+            right: calc(50% - 100px);
+            width: 50%;
+            min-width: 137px;
+            max-width: 200px;
+        }
+    
+        &__bg02 {
+            position: absolute;
+            top: -50%;
+            left: -15%;
+            display: none;
+        }
+    
+        &__bg03 {
+            position: absolute;
+            bottom: -10%;
+            left: -15%;
+            display: none;
+        }
+    }
+    
+}

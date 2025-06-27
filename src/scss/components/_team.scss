@@ -40,8 +40,16 @@
 
             border-radius: 30px;
             position: relative;
-            height: 466px;
+            height: inherit;
             overflow: hidden;
+            background-color: var(--navy-blue);
+            padding: 20px 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid var(--yellow);
+            border-bottom: none;
+            
 
             & > img {
                 position: absolute;
@@ -67,6 +75,10 @@
             gap: 15px;
         }
 
+        &_icon {
+            margin-bottom: 10px;
+        }
+
         &_socials-linkedin, &_socials-telegram {
             height: 30px;
             width: 30px;
@@ -78,7 +90,6 @@
         }
 
         &_name, &_position {
-            position: absolute;
             left: 18px;
         }
 
@@ -92,7 +103,12 @@
         &_position {
             z-index: 1;
             bottom: 20px;
+            color: var(--yellow);
+            font-weight: 500;
+        }
 
+        &_text {
+            color: #ffffffaa;
         }
     }
 
@@ -174,7 +190,6 @@
 
                 border-radius: 30px;
                 position: relative;
-                height: 466px;
                 overflow: hidden;
 
                 & > img {
@@ -212,8 +227,6 @@
             }
 
             &_name, &_position {
-                position: absolute;
-                left: 18px;
             }
 
             &_name {

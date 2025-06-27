@@ -1,0 +1,200 @@
+.operator {
+
+    margin: 130px 0px;
+
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__form {
+        flex: 0 1 57%;
+
+        .form__form {
+            a {
+                color: #fff;
+                display: flex;
+                max-width: 290px;
+                height: 50px;
+                margin-left: auto;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__contacts {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 30px;
+
+        &_item {
+        }
+    }
+
+    &__contact {
+
+        &_socials {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--white-navy);
+            svg {
+                path {
+                    stroke: var(--white-navy);
+                }
+                circle {
+                    stroke: var(--white-navy);
+                }
+            }
+
+            #calling {
+                path {
+                    fill: var(--white-navy);
+                }
+            }
+
+            span {
+                font-size: var(--mobileTitle-size);
+                font-family: var(--raleway);
+                font-weight: 500;
+            }
+        }
+
+        &_item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+                color: var(--white-06-navy);
+            }
+        }
+    }
+
+    &__bg {
+        flex: 0 1 43%;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    input {
+        background-color: #fff;
+        height: 50px;
+        border-radius: var(--radius);
+        width: 100%;
+        padding: 0px 20px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 1080px) {
+        margin: 70px 0px;
+
+        &__container {
+            display: flex;
+            gap: 20px;
+            flex-direction: column-reverse;
+        }
+    
+        &__form {
+            flex: 0 1 57%;
+    
+            .form__form {
+                text-align: center;
+                background-color: transparent;
+                padding: 0px 15px;
+                a {
+                    color: #fff;
+                    display: flex;
+                    max-width: inherit;
+                    height: 50px;
+                    margin-left: 0;
+                    margin-top: 30px;
+                }
+
+                .form__form-text{
+                    margin: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+    
+        &__contacts {
+    
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            margin-top: 70px;
+    
+            &_item {
+            }
+        }
+    
+        &__contact {
+    
+            &_socials {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 30px;
+                color: var(--white-navy);
+                svg {
+                    path {
+                        stroke: var(--white-navy);
+                    }
+                    circle {
+                        stroke: var(--white-navy);
+                    }
+                }
+    
+                #calling {
+                    path {
+                        fill: var(--white-navy);
+                    }
+                }
+    
+                span {
+                    font-size: var(--mobileTitle-size);
+                    font-family: var(--raleway);
+                    font-weight: 500;
+                }
+            }
+    
+            &_item-list {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                a {
+                    color: var(--white-06-navy);
+                }
+            }
+        }
+    
+        &__bg {
+            flex: 0 1 43%;
+            border-radius: 30px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        input {
+            background-color: #fff;
+            height: 50px;
+            border-radius: var(--radius);
+            width: 100%;
+            padding: 0px 20px;
+            margin-top: 30px;
+        }
+    }
+
+}
